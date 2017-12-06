@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('pages.home');
 });
+
+Route::get('/privacy-policy', function(){
+    return view('pages.privacy-policy');
+});
