@@ -9,9 +9,9 @@
 
             <div class="collapse navbar-collapse mr-auto" id="navbarSupportedContent">
                 <form class="form-inline my-2 my-lg-0">
-                  <input class="form-control mr-sm-2" type="search" placeholder="@langs('email')" aria-label="Search">
-                  <input class="form-control mr-sm-2" type="search" placeholder="@langs('password')" aria-label="Search">
-                   <button class="btn btn-outline-success my-2 my-sm-0" type="submit">@langs('login')</button>
+                  <input class="form-control mr-sm-2" type="search" placeholder="@lang('test')" aria-label="Search">
+                  <input class="form-control mr-sm-2" type="search" placeholder="@lang('password')" aria-label="Search">
+                   <button class="btn btn-outline-success my-2 my-sm-0" type="submit">@lang('login')</button>
                 </form>
             </div>
         </nav>
