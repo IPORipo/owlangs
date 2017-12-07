@@ -2,8 +2,26 @@
 // Fonts
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
 
-// Variables
-@import "variables";
+.hidden {
+	text-indent: -99999em;
+	display: none;
+}
 
-// Bootstrap
-@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+header {
+    	background:url(../images/background_header.jpg) no-repeat;	
+
+}
+#faces {
+	height:85px;
+	background: #ef8b14; /* Old browsers */
+	background: -moz-linear-gradient(left,  #ef8b14 0%, #eea146 51%, #ef8b14 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#ef8b14), color-stop(51%,#eea146), color-stop(100%,#ef8b14)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  #ef8b14 0%,#eea146 51%,#ef8b14 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,  #ef8b14 0%,#eea146 51%,#ef8b14 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left,  #ef8b14 0%,#eea146 51%,#ef8b14 100%); /* IE10+ */
+	background: linear-gradient(to right,  #ef8b14 0%,#eea146 51%,#ef8b14 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ef8b14', endColorstr='#ef8b14',GradientType=1 ); /* IE6-9 */
+}
+#banner {
+	
+}
