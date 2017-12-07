@@ -68,4 +68,32 @@
             </div>
         </div>
     </div>
+    <div class="container-fluid" id="film">
+        <div class="container">
+             <h2>@langs("<span>Zostań sową językową</span> i baw się jak nigdy w życiu!")</h2>
+
+            <video controls poster="images/video_poster.jpg">
+                <source src="movie.mp4" type="video/mp4">
+                <source src="movie.ogg" type="video/ogg">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4"><img id="ico1" src="images/ico1.png" alt="nauka" />@langs("Ucz się i nauczaj")</div>
+                <div class="col-sm-4"><img id="ico4" src="images/ico4.png" alt="nauka" />@langs("Szlifuj język")</div>
+                <div class="col-sm-4"><img id="ico7" src="images/ico7.png" alt="nauka" />@langs("Zdobywaj nagrody")</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4"><img id="ico2" src="images/ico2.png" alt="nauka" />@langs("Twórz autorskie kursy językowe")</div>
+                <div class="col-sm-4"><img id="ico5" src="images/ico5.png" alt="nauka" />@langs("Poznawaj ludzi takich jak Ty")</div>
+                <div class="col-sm-4"><img id="ico8" src="images/ico8.png" alt="nauka" />@langs("Pnij się po szczeblach rankingu")</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4"><img id="ico3" src="images/ico3.png" alt="nauka" />@langs("Pomagaj i proś o pomoc")</div>
+                <div class="col-sm-4"><img id="ico6" src="images/ico6.png" alt="nauka" />@langs("Tłumacz teksty")</div>
+                <div class="col-sm-4"><img id="ico9" src="images/ico9.png" alt="nauka" />@langs("Zarabiaj na swoich umiejętnościach")</div>
+            </div>
+        </div>
+    </div>
 @endsection

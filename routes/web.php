@@ -11,14 +11,18 @@
 |
 */
 
-Route::get('/', function () {
-    return view('pages.home');
+Route::group(['prefix' => LaravelLocalization::setLocale()], function (){
+    Route::get('/', function () {
+        return view('pages.home');
+    });
+    
+    Route::get('/contact',function(){
+        return view('pages.contact');
+    });
+    
+    Route::get('/privacy-policy', function(){
+        return view('pages.privacy-policy');
+    });
+
 });
 
-Route::get('/contact',function(){
-    return view('pages.contact');
-});
-
-Route::get('/privacy-policy', function(){
-    return view('pages.privacy-policy');
-});
