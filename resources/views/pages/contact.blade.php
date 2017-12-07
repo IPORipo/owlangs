@@ -5,5 +5,10 @@
 @endsection
 
 @section('content')
-    home page
+    <form action="{{route('sendmail')}}" method="GET">
+        <input type="text" name="title">
+        <input type="email" name="email">
+        <input type="textarea" name="msg">
+        <input type="submit">
+    </form>
 @endsection
