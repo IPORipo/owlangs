@@ -26,3 +26,4 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function (){
 
 });
 
+Route::get('/sendmail','MailController@send')->name('sendmail');
