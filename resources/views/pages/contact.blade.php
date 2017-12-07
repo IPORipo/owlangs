@@ -7,9 +7,12 @@
     <title>Document</title>
 </head>
 <body>
-    <div>
-        new branch test
-    </div>
+    <form action="{{route('sendmail')}}" method="GET">
+        <input type="text" name="title">
+        <input type="email" name="email">
+        <input type="textarea" name="msg">
+        <input type="submit">
+    </form>
 </body>
 </html>
 

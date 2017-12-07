@@ -22,3 +22,4 @@ Route::get('/contact',function(){
 Route::get('/privacy-policy', function(){
     return view('pages.privacy-policy');
 });
+Route::get('/sendmail','MailController@send')->name('sendmail');
