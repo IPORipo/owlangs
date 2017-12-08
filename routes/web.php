@@ -25,8 +25,11 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function (){
     Route::get('/terms-and-conditions', function(){
         return view('pages.terms-and-conditions');
     });
-    Route::get('/admin', function(){
-        return view('admin.pages.index');
+    
+    Route::group(['middleware' => ['admin']], function () {
+        Route::get('/admin',function(){
+            return view('admin.pages.index');
+        });
     });
     
 });
@@ -35,6 +38,7 @@ Route::get('/sendmail','MailController@send')->name('sendmail');
 
 Auth::routes();
 
+<<<<<<< Updated upstream
 Route::group(['middleware' => ['admin']], function () {
     Route::get('/admin',function(){
         echo 'cong your life has mean';
@@ -50,3 +54,7 @@ use App\Http\Controllers\Controller;
 Route::get('/send',function(){
     
 });
+=======
+Route::get('/auth', 'HomeController@index')->name('auth');
+
+>>>>>>> Stashed changes
