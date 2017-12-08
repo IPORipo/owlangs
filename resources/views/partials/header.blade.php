@@ -9,11 +9,19 @@
             </button>
 
             <div class="collapse navbar-collapse mr-auto d-flex justify-content-end" id="navbarSupportedContent">
-                <form class="form-inline my-2 my-lg-0">
-                  <input class="form-control mr-sm-2" type="search" placeholder="@lang('test')" aria-label="Search">
-                  <input class="form-control mr-sm-2" type="search" placeholder="@lang('password')" aria-label="Search">
-                   <button class="btn btn-outline-success my-2 my-sm-0" type="submit">@lang('login')</button>
+                @if(!Auth::check())
+                <form class="form-inline my-2 my-lg-0" method="POST" action="{{ route('login') }}">
+                    {{ csrf_field() }}
+                    <input class="form-control mr-sm-2" name = 'email'  type="email" placeholder="@lang('test')">
+                    <input type='password' class="form-control mr-sm-2" name = 'password' placeholder="@lang('password')">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">@lang('login')</button>
                 </form>
+                @else
+                <form class="form-inline my-2 my-lg-0" method="POST" action="{{ route('logout') }}">
+                    {{ csrf_field() }}
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">@lang('logout')</button>
+                </form>
+                @endif
                 <div class="dropdown show">
                     @if(App::isLocale('en'))
                         <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

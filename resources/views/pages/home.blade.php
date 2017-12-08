@@ -59,12 +59,13 @@
                     <!-- <div class="name"></div> -->
 
                     <span id="lub">@lang("lub")</span>
-                    <div class='form'>
-                        <input id="imie" required placeholder="Wpisz swoje imię">
-                        <input id="email" tyle='email' required placeholder="Wpisz swój e-mail">
-                        <input type="password" required id="haslo" placeholder="Wpisz swoje hasło">
-                        <button class="btn btn-100 register">@lang("ZAREJESTRUJ SIĘ")</button>
-                    </div>
+                    <form class='form' method="POST" action="{{ route('register') }}">
+                        {{ csrf_field() }}
+                        <input id="imie" name = 'name' required placeholder="Wpisz swoje imię">
+                        <input id="email" tyle='email' name = 'email' required placeholder="Wpisz swój e-mail">
+                        <input type="password" name = 'password' required id="haslo" placeholder="Wpisz swoje hasło">
+                        <button class="btn btn-100 register" type = 'submit'>@lang("ZAREJESTRUJ SIĘ")</button>
+                    </form>
                 </div>
                 </div>
             </div>
