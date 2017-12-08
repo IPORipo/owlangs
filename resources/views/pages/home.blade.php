@@ -46,17 +46,19 @@
                 <div id="formularz">
 
                     <button class="loginBtn facebook">
-                        <img src="images/facebook.png" alt="fb" />
+                      <i class="fa fa-facebook" aria-hidden="true"></i>
                         <span>@lang("Wejdź przez Facebook")</span>
                     </button>
                     <!-- <div class="response"></div> -->
 
                     <div class="gSignInWrapper">
-                        <button id='customBtn1' class="google customGPlusSignIn"><img src="imgages/gplus.png" alt="google plus" /><span>@lang("Wejdź przez Google+")</span></button>
+                        <button id='customBtn1' class="google customGPlusSignIn">
+                        <i class="fa fa-google" aria-hidden="true"></i>
+                        <span>@lang("Wejdź przez Google+")</span></button>
                     </div>
                     <!-- <div class="name"></div> -->
 
-                    <span>@lang("lub")</span>
+                    <span id="lub">@lang("lub")</span>
                     <div class='form'>
                         <input id="imie" required placeholder="Wpisz swoje imię">
                         <input id="email" tyle='email' required placeholder="Wpisz swój e-mail">
@@ -78,21 +80,124 @@
                 Your browser does not support the video tag.
             </video>
         </div>
+        <div class="container" id="fts">
+            <div class="row">
+                <div class="col-sm-4"><img id="ico1" src="images/ico1.png" alt="nauka" /><p>@lang("Ucz się i nauczaj")</p></div>
+                <div class="col-sm-4"><img id="ico4" src="images/ico4.png" alt="nauka" /><p>@lang("Szlifuj język")</p></div>
+                <div class="col-sm-4"><img id="ico7" src="images/ico7.png" alt="nauka" /><p>@lang("Zdobywaj nagrody")</p></div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4"><img id="ico2" src="images/ico2.png" alt="nauka" /><p>@lang("Twórz autorskie kursy językowe")</p></div>
+                <div class="col-sm-4"><img id="ico5" src="images/ico5.png" alt="nauka" /><p>@lang("Poznawaj ludzi takich jak Ty")</p></div>
+                <div class="col-sm-4"><img id="ico8" src="images/ico8.png" alt="nauka" /><p>@lang("Pnij się po szczeblach rankingu")</p></div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4"><img id="ico3" src="images/ico3.png" alt="nauka" /><p>@lang("Pomagaj i proś o pomoc")</p></div>
+                <div class="col-sm-4"><img id="ico6" src="images/ico6.png" alt="nauka" /><p>@lang("Tłumacz teksty")</p></div>
+                <div class="col-sm-4"><img id="ico9" src="images/ico9.png" alt="nauka" /><p>@lang("Zarabiaj na swoich umiejętnościach")</p></div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid infos" id="info-1">
         <div class="container">
             <div class="row">
-                <div class="col-sm-4"><img id="ico1" src="images/ico1.png" alt="nauka" />@lang("Ucz się i nauczaj")</div>
-                <div class="col-sm-4"><img id="ico4" src="images/ico4.png" alt="nauka" />@lang("Szlifuj język")</div>
-                <div class="col-sm-4"><img id="ico7" src="images/ico7.png" alt="nauka" />@lang("Zdobywaj nagrody")</div>
+                <div class="col-md-6">
+                    <img id="smartphone" src="images/tablet_long.png" alt="smartphone" />
+                </div>
+                <div class="col-md-6">
+                    <h3> @lang("Pierwsze na świecie")</h3>
+                     <span>
+                        @lang("kursy online tworzone dla Ciebie<br>INDYWIDUALNIE!!!")
+                    </span>
+                    <p>
+                        @lang("Zapomnij o masowych kursach elearningowych, które nijak się mają do Twoich potrzeb. Korepetytorzy sowiej społeczności będą tworzyć specjalnie dla Ciebie tylko te szkolenia i zadania do wykonania, które są Ci w danej chwili najbardziej potrzebne.")
+                    </p>
+                    <p>@lang("Te rewolucyjne podejście jest możliwe dzięki zaawansowanym narzędziom do kreacji szkoleń oraz metodom badania profilu ucznia udostępnionej każdemu korepetytorowi. Dzięki temu Twoja nauka stanie się szybsza. efektywniejsza i przyjemniejsza.")</p>
+                </div>
             </div>
+        </div>
+    </div>
+    <div class="container-fluid infos" id="info-2">
+        <div class="container">
             <div class="row">
-                <div class="col-sm-4"><img id="ico2" src="images/ico2.png" alt="nauka" />@lang("Twórz autorskie kursy językowe")</div>
-                <div class="col-sm-4"><img id="ico5" src="images/ico5.png" alt="nauka" />@lang("Poznawaj ludzi takich jak Ty")</div>
-                <div class="col-sm-4"><img id="ico8" src="images/ico8.png" alt="nauka" />@lang("Pnij się po szczeblach rankingu")</div>
+                <div class="col-md-6">
+                    <h3> @lang("Pierwsze na świecie")</h3>
+                    <span>
+                        @lang("kursy online tworzone dla Ciebie<br>INDYWIDUALNIE!!!")
+                    </span>
+                    <p>
+                        @lang("Zapomnij o masowych kursach elearningowych, które nijak się mają do Twoich potrzeb. Korepetytorzy sowiej społeczności będą tworzyć specjalnie dla Ciebie tylko te szkolenia i zadania do wykonania, które są Ci w danej chwili najbardziej potrzebne.")
+                    </p>
+                    <p>@lang("Te rewolucyjne podejście jest możliwe dzięki zaawansowanym narzędziom do kreacji szkoleń oraz metodom badania profilu ucznia udostępnionej każdemu korepetytorowi. Dzięki temu Twoja nauka stanie się szybsza. efektywniejsza i przyjemniejsza.")</p>
+                </div>
+                <div class="col-md-6">
+                    <img id="smartphone" src="images/smartphone.jpg" alt="smartphone" />
+                </div>
             </div>
+        </div>
+    </div>
+    <div class="container-fluid infos" id="info-3">
+        <div class="container">
             <div class="row">
-                <div class="col-sm-4"><img id="ico3" src="images/ico3.png" alt="nauka" />@lang("Pomagaj i proś o pomoc")</div>
-                <div class="col-sm-4"><img id="ico6" src="images/ico6.png" alt="nauka" />@lang("Tłumacz teksty")</div>
-                <div class="col-sm-4"><img id="ico9" src="images/ico9.png" alt="nauka" />@lang("Zarabiaj na swoich umiejętnościach")</div>
+                <div class="col-md-6">
+                    <img id="smartphone" src="images/tablet_long.png" alt="smartphone" />
+                </div>
+                <div class="col-md-6">
+                    <h3> @lang("Pierwsze na świecie")</h3>
+                     <span>
+                        @lang("kursy online tworzone dla Ciebie<br>INDYWIDUALNIE!!!")
+                    </span>
+                    <p>
+                        @lang("Zapomnij o masowych kursach elearningowych, które nijak się mają do Twoich potrzeb. Korepetytorzy sowiej społeczności będą tworzyć specjalnie dla Ciebie tylko te szkolenia i zadania do wykonania, które są Ci w danej chwili najbardziej potrzebne.")
+                    </p>
+                    <p>@lang("Te rewolucyjne podejście jest możliwe dzięki zaawansowanym narzędziom do kreacji szkoleń oraz metodom badania profilu ucznia udostępnionej każdemu korepetytorowi. Dzięki temu Twoja nauka stanie się szybsza. efektywniejsza i przyjemniejsza.")</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid infos" id="info-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3> @lang("Pierwsze na świecie")</h3>
+                    <span>
+                        @lang("kursy online tworzone dla Ciebie<br>INDYWIDUALNIE!!!")
+                    </span>
+                    <p>
+                        @lang("Zapomnij o masowych kursach elearningowych, które nijak się mają do Twoich potrzeb. Korepetytorzy sowiej społeczności będą tworzyć specjalnie dla Ciebie tylko te szkolenia i zadania do wykonania, które są Ci w danej chwili najbardziej potrzebne.")
+                    </p>
+                    <p>@lang("Te rewolucyjne podejście jest możliwe dzięki zaawansowanym narzędziom do kreacji szkoleń oraz metodom badania profilu ucznia udostępnionej każdemu korepetytorowi. Dzięki temu Twoja nauka stanie się szybsza. efektywniejsza i przyjemniejsza.")</p>
+                </div>
+                <div class="col-md-6">
+                    <img id="smartphone" src="images/tablet_long.png" alt="smartphone" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" id="testimonials">
+        <h2 class="hidden">@lang("Komentarze")</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <img src="images/twarz1_big.png" alt="avatar3" />
+                     <p>@lang("Nigdy nie lubiłem się uczyć angielskiego. Do czasu odkrycia sowy językowej, gdzie mogę wypełniać pasjonujące questy i zadania jak w rasowej grze RPG")</p>
+                    <span>@lang("Adam, nauczyciel")</span>
+                </div>
+                <div class="col-md-3">
+                    <img src="images/twarz2_big.png" alt="avatar4" />
+                    <p>@lang("Szczerze mówiąc, nie wierzyłem, że w jednym miejscu rozwiąże wszystkie swoje problemy językowe. Po pierwszym logowaniu prawda okazała się lepsza od obietnic.")</p>
+                    <span>@lang("Adam, barman")</span>
+                </div>
+                <div class="col-md-3">
+                    <img src="images/twarz1_big.png" alt="avatar3" />
+                    <p>@lang("Nigdy nie lubiłem się uczyć angielskiego. Do czasu odkrycia sowy językowej, gdzie mogę wypełniać pasjonujące questy i zadania jak w rasowej grze RPG")</p>
+                    <span>@lang("Adam, nauczyciel")</span>
+                </div>
+                <div class="col-md-3">
+                    <img src="images/twarz2_big.png" alt="avatar4" />
+                    <p>@lang("Szczerze mówiąc, nie wierzyłem, że w jednym miejscu rozwiąże wszystkie swoje problemy językowe. Po pierwszym logowaniu prawda okazała się lepsza od obietnic.")</p>
+                    <span>@lang("Adam, barman")</span>
+                </div>
             </div>
         </div>
     </div>
