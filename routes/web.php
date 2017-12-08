@@ -27,3 +27,13 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function (){
 });
 
 Route::get('/sendmail','MailController@send')->name('sendmail');
+
+Auth::routes();
+
+Route::get('/auth', 'HomeController@index')->name('auth');
+
+Route::group(['middleware' => ['admin']], function () {
+    Route::get('/admin',function(){
+        echo 'cong your life has mean';
+    });
+});
