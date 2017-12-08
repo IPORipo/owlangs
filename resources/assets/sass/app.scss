@@ -1,7 +1,18 @@
 
 // Fonts
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+@import url('https://fonts.googleapis.com/css?family=Lato');
 
+@mixin railway($weight,$size){
+	font-family: 'Raleway', sans-serif;
+	font-weight: $weight;
+	font-size: $size;
+}
+@mixin lato($weight,$size){
+	font-family: 'Lato', sans-serif;
+	font-weight: $weight;
+	font-size: $size;
+}
 .hidden {
 	text-indent: -99999em;
 	display: none;
@@ -9,10 +20,67 @@
 
 header {
     	background:url(../images/background_header.jpg) no-repeat;	
+		.navbar {
+			#navbarSupportedContent {
+				form {
+					input {
+						border-radius: 2px;
+						height: 25px;
+						@include railway(400,12px);
+						text-transform: uppercase;
+					}
+					input:focus {
+						    border-color: #ec9900;
+							outline: 0;
+							box-shadow: 0 0 0 0.2rem rgba(235, 159, 38, 0.25);
+					}
+					button {
+						 border-radius: 2px;
+						@include railway(400,12px);
+						padding: 2px 20px;
+						text-transform: uppercase;
+						cursor: pointer;
+						border: 1px solid #ec9900;
+						color: #eb9c10;
+					}
+					button:hover {
+						color: #fff;
+						background: #eb9c10;
+					}
+				}
+				.dropdown {
+					margin-left: 10px;
+					.btn-secondary {
+						color: #fff;
+						background-color: #eb9b12;
+						border-color: #ffffff;
+						border-radius: 2px;
+						font-size: 12px;
+						padding: 3px 10px;
+						outline: none;
+						box-shadow: 0 0 0 0.2rem rgba(235, 152, 0, 0.17) inset;
+					}
+					.dropdown-menu {
+						width: 52px;
+						border-radius: 2px;
+						min-width: 30px;
+						padding: 0;
+						top: 98%;
+						margin: 0;
+						a {
+							font-size: 12px;
+							padding: 3px 10px;
+							cursor: pointer;
+						}
+					}
+				}
+			}
+		}
 
 }
 #faces {
 	height:85px;
+	padding: 13px 0;
 	background: #ef8b14; /* Old browsers */
 	background: -moz-linear-gradient(left,  #ef8b14 0%, #eea146 51%, #ef8b14 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#ef8b14), color-stop(51%,#eea146), color-stop(100%,#ef8b14)); /* Chrome,Safari4+ */
@@ -24,4 +92,238 @@ header {
 }
 #banner {
 	padding: 50px 0;
+	background: url(../images/background_banner.jpg) center no-repeat;
+	background-size: cover;
+	padding-bottom: 300px;
+	#e-learning {
+		#schemat {
+			width: 100%;
+		}
+		#tlumacz {
+			    position: relative;
+				top: -331px;
+				left: 205px;
+		}
+		#ucz1 {
+			top: -353px;
+			position: relative;
+			left: 383px;
+		}
+		#zdobywaj {
+			position: relative;
+			left: -246px;
+			top: -38px;
+		}
+		#takich {
+			    position: relative;
+				left: 120px;
+				top: -46px;
+		}
+	}
+	#chmura {
+		position: absolute;
+	
+	}
+	h3 {
+		position: relative;
+		left: 181px;
+		color: #fff;
+		top: -58px;
+		display: inline-block;
+		@include lato(700,32px);
+	}
+	p {
+		    position: relative;
+			color: #ffffff;
+			top: 71px;
+			display: inline-block;
+			text-align: center;
+			left: 0;
+			@include lato(700,14px);
+			transform: rotate(-2deg);
+			line-height: 30px;
+		span {
+			font-size: 18px;
+			@include lato(700,21px);
+			line-height: 28px;
+		}
+	}
+	#formularz {
+		    position: absolute;
+			top: 248px;
+			left: 100px;
+			width: 200px;
+			text-align: center;
+		button {
+			    border-radius: 2px;
+			margin-bottom: 10px;
+			border: none;
+			width: 100%;
+			cursor: pointer;
+			color: #fff;
+			@include lato(300,14px);
+			padding: 10px 0;
+		}
+		.facebook {
+			background: #3361a7;
+		}
+		.google {
+			background: #f25c58;
+		}
+		.form {
+			input {
+				    width: 100%;
+					border-radius: 2px;
+					margin-bottom: 10px;
+					border: 1px solid #f8ab2e;
+					padding: 5px;
+
+			}
+			input:focus {
+				 border-color: #ec9900;
+							outline: 0;
+							box-shadow: 0 0 0 0.2rem rgba(235, 159, 38, 0.25);
+			}
+			button {
+				background: #f49500;
+				cursor: pointer;
+			}
+			button:hover {
+				background: #ec9900;
+				
+			}
+		}
+	}
+	#lub {
+		line-height: 47px;
+		font-size: 16px;
+		@include lato(300,14px);
+	}
+}
+#film {
+	background:url(../images/background_film.jpg) center no-repeat;
+	padding: 50px 0;
+	background-size: cover;
+	h2 {
+		font-size: 30px;
+		color: #fff;
+		text-align: center;
+		line-height: 80px;
+	}
+	#fts {
+		padding-top: 50px;
+		text-align: center;
+		p {
+			color: #fff;
+			font-size: 14px;
+			line-height: 28px;
+		}
+		img {
+			margin-bottom: 10px;
+		}
+	}
+
+}
+.infos {
+	padding: 50px 0;
+	background-size: cover;
+	img {
+		position: relative;
+		bottom: -64px;
+	}
+	h3 {
+		    text-align: left;
+			margin-top: 80px;
+			font-weight: 600;
+			font-size: 1.5em;
+			text-transform: uppercase;
+			color: #494949;
+	}
+	span {
+			display: inline-block;
+			margin-bottom: 40px;
+			text-align: left;
+			margin-top: 5px;
+			font-size: 1.3em;
+			margin-left: 38px;
+			line-height: 29px;
+			color: #494949;
+	}
+	span:after {
+		content: '';
+		width: 40%;
+		height: 2px;
+		background: #999999;
+		position: absolute;
+		display: block;
+		left: 14px;
+		margin-top: 20px;
+	}
+	p {
+		text-align: justify;
+		line-height: 20px;
+		color: #666666;
+		@include lato(300,12px );
+		padding-right: 20px;
+	}
+}
+#info-2 {
+	img {
+		position: inherit;
+		bottom: none;
+	}
+}
+#info-1 {
+	background: url('/images/tlo_ludzie.jpg');
+}
+#info-3,#info-4 {
+	background: url('/images/tlo_paski.jpg');
+}
+#testimonials {
+	background: url(/images/tlo_ludzie_pom.jpg) no-repeat;
+	background-size: cover;
+	padding: 30px 0;
+	text-align: center;
+	p {
+		    margin-top: 30px;
+			text-align: justify;
+			line-height: 20px;
+			color: #fff;
+			@include lato(300,12px );
+			line-height: 18px;
+			text-align: left;
+
+	}
+	span {
+			@include lato(300,13px );
+			display: inline;
+			color: #fff;
+			text-align: left;
+	}
+}
+footer {
+	background: #323232;
+	text-align: center;
+	padding: 30px;
+	ul {
+		li {
+			list-style-type: none;
+			color: #fff;
+			a {
+				@include lato(300,12px );
+				color: #fff;
+			}
+			a:hover {
+				text-decoration: none;
+				color: #eb9c10;
+			}
+			margin-left: 10px;
+		}
+	}
+	span {
+		color: #fff;
+		margin-left: 60px;
+		text-align: center;
+		display: inline;
+	}
 }

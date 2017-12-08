@@ -19,11 +19,13 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function (){
     Route::get('/contact',function(){
         return view('pages.contact');
     });
-    
     Route::get('/privacy-policy', function(){
         return view('pages.privacy-policy');
     });
-
+    Route::get('/admin', function(){
+        return view('admin.pages.index');
+    });
+    
 });
 
 Route::get('/sendmail','MailController@send')->name('sendmail');

@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);.hidden {
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);@import url(https://fonts.googleapis.com/css?family=Lato);.hidden {
   text-indent: -99999em;
   display: none;
 }
@@ -7,8 +7,73 @@ header {
   background: url(../images/background_header.jpg) no-repeat;
 }
 
+header .navbar #navbarSupportedContent form input {
+  border-radius: 2px;
+  height: 25px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+header .navbar #navbarSupportedContent form input:focus {
+  border-color: #ec9900;
+  outline: 0;
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(235, 159, 38, 0.25);
+          box-shadow: 0 0 0 0.2rem rgba(235, 159, 38, 0.25);
+}
+
+header .navbar #navbarSupportedContent form button {
+  border-radius: 2px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  padding: 2px 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: 1px solid #ec9900;
+  color: #eb9c10;
+}
+
+header .navbar #navbarSupportedContent form button:hover {
+  color: #fff;
+  background: #eb9c10;
+}
+
+header .navbar #navbarSupportedContent .dropdown {
+  margin-left: 10px;
+}
+
+header .navbar #navbarSupportedContent .dropdown .btn-secondary {
+  color: #fff;
+  background-color: #eb9b12;
+  border-color: #ffffff;
+  border-radius: 2px;
+  font-size: 12px;
+  padding: 3px 10px;
+  outline: none;
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(235, 152, 0, 0.17) inset;
+          box-shadow: 0 0 0 0.2rem rgba(235, 152, 0, 0.17) inset;
+}
+
+header .navbar #navbarSupportedContent .dropdown .dropdown-menu {
+  width: 52px;
+  border-radius: 2px;
+  min-width: 30px;
+  padding: 0;
+  top: 98%;
+  margin: 0;
+}
+
+header .navbar #navbarSupportedContent .dropdown .dropdown-menu a {
+  font-size: 12px;
+  padding: 3px 10px;
+  cursor: pointer;
+}
+
 #faces {
   height: 85px;
+  padding: 13px 0;
   background: #ef8b14;
   /* Old browsers */
   /* FF3.6+ */
@@ -25,4 +90,285 @@ header {
 
 #banner {
   padding: 50px 0;
+  background: url(../images/background_banner.jpg) center no-repeat;
+  background-size: cover;
+  padding-bottom: 300px;
+}
+
+#banner #e-learning #schemat {
+  width: 100%;
+}
+
+#banner #e-learning #tlumacz {
+  position: relative;
+  top: -331px;
+  left: 205px;
+}
+
+#banner #e-learning #ucz1 {
+  top: -353px;
+  position: relative;
+  left: 383px;
+}
+
+#banner #e-learning #zdobywaj {
+  position: relative;
+  left: -246px;
+  top: -38px;
+}
+
+#banner #e-learning #takich {
+  position: relative;
+  left: 120px;
+  top: -46px;
+}
+
+#banner #chmura {
+  position: absolute;
+}
+
+#banner h3 {
+  position: relative;
+  left: 181px;
+  color: #fff;
+  top: -58px;
+  display: inline-block;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+}
+
+#banner p {
+  position: relative;
+  color: #ffffff;
+  top: 71px;
+  display: inline-block;
+  text-align: center;
+  left: 0;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  -webkit-transform: rotate(-2deg);
+          transform: rotate(-2deg);
+  line-height: 30px;
+}
+
+#banner p span {
+  font-size: 18px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 28px;
+}
+
+#banner #formularz {
+  position: absolute;
+  top: 248px;
+  left: 100px;
+  width: 200px;
+  text-align: center;
+}
+
+#banner #formularz button {
+  border-radius: 2px;
+  margin-bottom: 10px;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+  color: #fff;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  padding: 10px 0;
+}
+
+#banner #formularz .facebook {
+  background: #3361a7;
+}
+
+#banner #formularz .google {
+  background: #f25c58;
+}
+
+#banner #formularz .form input {
+  width: 100%;
+  border-radius: 2px;
+  margin-bottom: 10px;
+  border: 1px solid #f8ab2e;
+  padding: 5px;
+}
+
+#banner #formularz .form input:focus {
+  border-color: #ec9900;
+  outline: 0;
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(235, 159, 38, 0.25);
+          box-shadow: 0 0 0 0.2rem rgba(235, 159, 38, 0.25);
+}
+
+#banner #formularz .form button {
+  background: #f49500;
+  cursor: pointer;
+}
+
+#banner #formularz .form button:hover {
+  background: #ec9900;
+}
+
+#banner #lub {
+  line-height: 47px;
+  font-size: 16px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+#film {
+  background: url(../images/background_film.jpg) center no-repeat;
+  padding: 50px 0;
+  background-size: cover;
+}
+
+#film h2 {
+  font-size: 30px;
+  color: #fff;
+  text-align: center;
+  line-height: 80px;
+}
+
+#film #fts {
+  padding-top: 50px;
+  text-align: center;
+}
+
+#film #fts p {
+  color: #fff;
+  font-size: 14px;
+  line-height: 28px;
+}
+
+#film #fts img {
+  margin-bottom: 10px;
+}
+
+.infos {
+  padding: 50px 0;
+  background-size: cover;
+}
+
+.infos img {
+  position: relative;
+  bottom: -64px;
+}
+
+.infos h3 {
+  text-align: left;
+  margin-top: 80px;
+  font-weight: 600;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  color: #494949;
+}
+
+.infos span {
+  display: inline-block;
+  margin-bottom: 40px;
+  text-align: left;
+  margin-top: 5px;
+  font-size: 1.3em;
+  margin-left: 38px;
+  line-height: 29px;
+  color: #494949;
+}
+
+.infos span:after {
+  content: '';
+  width: 40%;
+  height: 2px;
+  background: #999999;
+  position: absolute;
+  display: block;
+  left: 14px;
+  margin-top: 20px;
+}
+
+.infos p {
+  text-align: justify;
+  line-height: 20px;
+  color: #666666;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  padding-right: 20px;
+}
+
+#info-2 img {
+  position: inherit;
+  bottom: none;
+}
+
+#info-1 {
+  background: url("/images/tlo_ludzie.jpg");
+}
+
+#info-3, #info-4 {
+  background: url("/images/tlo_paski.jpg");
+}
+
+#testimonials {
+  background: url(/images/tlo_ludzie_pom.jpg) no-repeat;
+  background-size: cover;
+  padding: 30px 0;
+  text-align: center;
+}
+
+#testimonials p {
+  margin-top: 30px;
+  text-align: justify;
+  line-height: 20px;
+  color: #fff;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: left;
+}
+
+#testimonials span {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: 13px;
+  display: inline;
+  color: #fff;
+  text-align: left;
+}
+
+footer {
+  background: #323232;
+  text-align: center;
+  padding: 30px;
+}
+
+footer ul li {
+  list-style-type: none;
+  color: #fff;
+  margin-left: 10px;
+}
+
+footer ul li a {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  color: #fff;
+}
+
+footer ul li a:hover {
+  text-decoration: none;
+  color: #eb9c10;
+}
+
+footer span {
+  color: #fff;
+  margin-left: 60px;
+  text-align: center;
+  display: inline;
 }
