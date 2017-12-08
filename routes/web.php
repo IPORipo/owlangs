@@ -22,6 +22,9 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function (){
     Route::get('/privacy-policy', function(){
         return view('pages.privacy-policy');
     });
+    Route::get('/terms-and-conditions', function(){
+        return view('pages.terms-and-conditions');
+    });
     Route::get('/admin', function(){
         return view('admin.pages.index');
     });
