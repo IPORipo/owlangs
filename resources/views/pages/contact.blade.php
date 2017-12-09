@@ -10,10 +10,10 @@
             <div class="row">
                 <div class="col-md-6 contact-form-block">  
                     <h1>Contact Us</h1>  
-                    <form action="{{route('sendmail')}}" method="GET">
-                        <input type="email" name="email" class="form-control" 
-                        placeholder="@lang('email')">
-                        <input type="text" name="title" class="form-control" placeholder="@lang('subject')">
+                    <form action="{{route('addcontact')}}" method="GET">
+                        <input type="name" name="name" class="form-control" placeholder="@lang('name')">
+                        <input type="email" name="email" class="form-control" placeholder="@lang('email')">
+                        <input type="text" name="subject" class="form-control" placeholder="@lang('subject')">
                         <textarea name="msg" id="" class="form-control" cols="30" rows="10" placeholder="@lang('message')"></textarea>
                         <input type="submit" class="btn btn-primary">
                     </form>
