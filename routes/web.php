@@ -35,6 +35,9 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function (){
         Route::get('/admin/users','admin\UsersController@getUsers')->name('users');
         Route::get('/admin/contact','admin\ContactController@index')->name('contact');
     });
+    Route::get('/admin', function(){
+        return view('admin.pages.index');
+    });
     
 });
 
