@@ -113,35 +113,35 @@
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td style="width:50px;"><span class="round"><img src="../assets/images/users/1.jpg" alt="user" width="50"></span></td>
+                                                <td style="width:50px;"><span class="round"><img src="{{asset('images/users/1.jpg')}}" alt="user" width="50"></span></td>
                                                 <td>
                                                     <h6>Sunil Joshi</h6><small class="text-muted">Web Designer</small></td>
                                                 <td>Elite Admin</td>
                                                 <td>Low</td>
                                             </tr>
                                             <tr class="active">
-                                                <td><span class="round"><img src="../assets/images/users/2.jpg" alt="user" width="50"></span></td>
+                                                <td><span class="round"><img src="{{asset('images/users/2.jpg')}}" alt="user" width="50"></span></td>
                                                 <td>
                                                     <h6>Andrew</h6><small class="text-muted">Project Manager</small></td>
                                                 <td>Real Homes</td>
                                                 <td>Medium</td>
                                             </tr>
                                             <tr>
-                                                <td><span class="round round-success"><img src="../assets/images/users/3.jpg" alt="user" width="50"></span></td>
+                                                <td><span class="round round-success"><img src="{{asset('images/users/3.jpg')}}" alt="user" width="50"></span></td>
                                                 <td>
                                                     <h6>Bhavesh patel</h6><small class="text-muted">Developer</small></td>
                                                 <td>MedicalPro Theme</td>
                                                 <td>High</td>
                                             </tr>
                                             <tr>
-                                                <td><span class="round round-primary"><img src="../assets/images/users/4.jpg" alt="user" width="50"></span></td>
+                                                <td><span class="round round-primary"><img src="{{asset('images/users/4.jpg')}}" alt="user" width="50"></span></td>
                                                 <td>
                                                     <h6>Nirav Joshi</h6><small class="text-muted">Frontend Eng</small></td>
                                                 <td>Elite Admin</td>
                                                 <td>Low</td>
                                             </tr>
                                             <tr>
-                                                <td><span class="round round-warning"><img src="../assets/images/users/5.jpg" alt="user" width="50"></span></td>
+                                                <td><span class="round round-warning"><img src="{{asset('images/users/5.jpg')}}" alt="user" width="50"></span></td>
                                                 <td>
                                                     <h6>Micheal Doe</h6><small class="text-muted">Content Writer</small></td>
                                                 <td>Helping Hands</td>
@@ -164,13 +164,13 @@
                                     <div class="message-widget contact-widget">
                                         <!-- Message -->
                                         <a href="#">
-                                            <div class="user-img"> <img src="../assets/images/users/1.jpg" alt="user" class="img-circle"> <span class="profile-status online pull-right"></span> </div>
+                                            <div class="user-img"> <img src="{{asset('images/users/1.jpg')}}" alt="user" class="img-circle"> <span class="profile-status online pull-right"></span> </div>
                                             <div class="mail-contnet">
                                                 <h5>Pavan kumar</h5> <span class="mail-desc">info@wrappixel.com</span></div>
                                         </a>
                                         <!-- Message -->
                                         <a href="#">
-                                            <div class="user-img"> <img src="../assets/images/users/2.jpg" alt="user" class="img-circle"> <span class="profile-status busy pull-right"></span> </div>
+                                            <div class="user-img"> <img src="{{asset('images/users/2.jpg')}}" alt="user" class="img-circle"> <span class="profile-status busy pull-right"></span> </div>
                                             <div class="mail-contnet">
                                                 <h5>Sonu Nigam</h5> <span class="mail-desc">pamela1987@gmail.com</span></div>
                                         </a>
@@ -182,19 +182,19 @@
                                         </a>
                                         <!-- Message -->
                                         <a href="#">
-                                            <div class="user-img"> <img src="../assets/images/users/4.jpg" alt="user" class="img-circle"> <span class="profile-status offline pull-right"></span> </div>
+                                            <div class="user-img"> <img src="{{asset('images/users/4.jpg')}}" alt="user" class="img-circle"> <span class="profile-status offline pull-right"></span> </div>
                                             <div class="mail-contnet">
                                                 <h5>Pavan kumar</h5> <span class="mail-desc">kat@gmail.com</span></div>
                                         </a>
                                         <!-- Message -->
                                         <a href="#">
-                                            <div class="user-img"> <img src="../assets/images/users/5.jpg" alt="user" class="img-circle"> <span class="profile-status offline pull-right"></span> </div>
+                                            <div class="user-img"> <img src="{{asset('images/users/5.jpg')}}" alt="user" class="img-circle"> <span class="profile-status offline pull-right"></span> </div>
                                             <div class="mail-contnet">
                                                 <h5>Andrew</h5> <span class="mail-desc">and@gmail.com</span></div>
                                         </a>
                                         <!-- Message -->
                                         <a href="#">
-                                            <div class="user-img"> <img src="../assets/images/users/6.jpg" alt="user" class="img-circle"> <span class="profile-status offline pull-right"></span> </div>
+                                            <div class="user-img"> <img src="{{asset('images/users/6.jpg')}}" alt="user" class="img-circle"> <span class="profile-status offline pull-right"></span> </div>
                                             <div class="mail-contnet">
                                                 <h5>Jonathan Jones</h5> <span class="mail-desc">jj@gmail.com</span></div>
                                         </a>
@@ -210,7 +210,7 @@
                 <div class="row">
                     <div class="col-lg-4 col-xlg-3">
                         <div class="card">
-                            <img class="card-img-top img-responsive" src="../assets/images/big/img1.jpg" alt="Card image cap">
+                            <img class="card-img-top img-responsive" src="{{asset('images/big/img1.jpg')}}" alt="Card image cap">
                             <div class="card-body">
                                 <h3 class="font-normal">Business development of rules 2017</h3>
                                 <span class="label label-info label-rounded">Technology</span>
