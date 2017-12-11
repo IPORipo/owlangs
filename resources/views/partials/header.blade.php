@@ -9,6 +9,7 @@
             </button>
 
             <div class="collapse navbar-collapse mr-auto d-flex justify-content-end" id="navbarSupportedContent">
+
                 @if(!Auth::check())
                 <form class="form-inline my-2 my-lg-0" method="POST" action="{{ route('login') }}">
                     {{ csrf_field() }}
@@ -19,7 +20,10 @@
                 @else
                 <form class="form-inline my-2 my-lg-0" method="POST" action="{{ route('logout') }}">
                     {{ csrf_field() }}
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">@lang('logout')</button>
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">@lang('en.logout')</button>
+                    <a href="" style = "margin-left:10px">
+                        <button class="btn btn-outline-success my-2 my-sm-0" > @lang('admin')</button>
+                    </a>
                 </form>
                 @endif
                 <div class="dropdown show">

@@ -10,10 +10,10 @@
             <div class="row">
                 <div class="col-md-6 contact-form-block">  
                     <h1>Contact Us</h1>  
-                    <form action="{{route('sendmail')}}" method="GET">
-                        <input type="email" name="email" class="form-control" 
-                        placeholder="@lang('email')">
-                        <input type="text" name="title" class="form-control" placeholder="@lang('subject')">
+                    <form action="{{route('addcontact')}}" method="GET">
+                        <input type="name" name="name" class="form-control" placeholder="@lang('name')">
+                        <input type="email" name="email" class="form-control" placeholder="@lang('email')">
+                        <input type="text" name="subject" class="form-control" placeholder="@lang('subject')">
                         <textarea name="msg" id="" class="form-control" cols="30" rows="10" placeholder="@lang('message')"></textarea>
                         <input type="submit" class="btn btn-primary">
                     </form>
@@ -21,7 +21,7 @@
                 <div class="col-md-6 contact-info-block">
                     <h4><span>Company Name</span>: New Future sp. z o.o.</h4>
                     <h4><span>Adress</span>: Krawiecka 3/10, Wrocław 50-148, Poland</h4>
-                    <img src="images/center.jpg" alt="">
+                    <img src="{{asset('images/center.jpg')}}" alt="">
                     <h4>NIP/tax identification number: <strong>8971805495</strong></h4>
                     <h4>How to contact us:<br>phone: <strong>+48 727 901 680</strong><br>email: <strong><a href="mailto:office@newfuture.company">office@newfuture.company</a></strong>
                     </h4>

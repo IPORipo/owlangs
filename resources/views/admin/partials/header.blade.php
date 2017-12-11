@@ -1,10 +1,10 @@
   <header class="topbar">
             <nav class="navbar top-navbar navbar-expand-md navbar-light">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="{{ route('admin') }}">
-                            <img src="{{ asset('images/logo.png') }}" alt="" class="dark-logo" >
-                            <span> - Admin</span>
-                    </a>
+                    <a class="navbar-brand" href="{{ route('admin') }}"> 
+                            <img src="{{ asset('images/logo.png') }}" alt="" class="dark-logo" > 
+                            <span> - Admin</span> 
+                    </a> 
                 </div>
                 <!-- ============================================================== -->
                 <div class="navbar-collapse">
