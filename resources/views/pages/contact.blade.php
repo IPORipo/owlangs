@@ -21,7 +21,7 @@
                 <div class="col-md-6 contact-info-block">
                     <h4><span>Company Name</span>: New Future sp. z o.o.</h4>
                     <h4><span>Adress</span>: Krawiecka 3/10, Wrocław 50-148, Poland</h4>
-                    <img src="images/center.jpg" alt="">
+                    <img src="{{asset('images/center.jpg')}}" alt="">
                     <h4>NIP/tax identification number: <strong>8971805495</strong></h4>
                     <h4>How to contact us:<br>phone: <strong>+48 727 901 680</strong><br>email: <strong><a href="mailto:office@newfuture.company">office@newfuture.company</a></strong>
                     </h4>
