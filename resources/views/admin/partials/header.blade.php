@@ -1,12 +1,9 @@
   <header class="topbar">
             <nav class="navbar top-navbar navbar-expand-md navbar-light">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="index.html">
-                            <img src="../assets/images/logo-icon.png" alt="homepage" class="dark-logo" />
-                        </b>
-                        <span>
-                            <img src="../assets/images/logo-text.png" alt="homepage" class="dark-logo" />
-                        </span>
+                    <a class="navbar-brand" href="{{ route('admin') }}">
+                            <img src="{{ asset('images/logo.png') }}" alt="" class="dark-logo" >
+                            <span> - Admin</span>
                     </a>
                 </div>
                 <!-- ============================================================== -->
@@ -30,13 +27,18 @@
                                 <input type="text" class="form-control" placeholder="Search & enter"> <a class="srh-btn"><i class="ti-close"></i></a>
                             </form>
                         </li>
-                        <!-- ============================================================== -->
-                        <!-- Profile -->
-                        <!-- ============================================================== -->
-                        <li class="nav-item">
-                            <a class="nav-link waves-effect waves-dark" href="#"><img src="../assets/images/users/1.jpg" alt="user" class="profile-pic" /></a>
-                        </li>
+                      
                     </ul>
+                    <div class="dropdown show">
+                        <a class="btn waves-effect waves-light pull-right hidden-sm-down dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                           <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                           {{ Auth::user()->name }}
+                        </a>
+
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item" href="{{ route('logout') }}">Logout</a>
+                        </div>
+                    </div>
                 </div>
             </nav>
         </header>

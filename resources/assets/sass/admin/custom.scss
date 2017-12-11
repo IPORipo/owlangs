@@ -1,0 +1,54 @@
+.topbar {
+    .navbar-header {
+        padding: 10px 20px;
+        a {
+            padding-left: 30px;
+            span {
+                position: absolute;
+                top: 15px;
+            }
+        }
+        img {
+            width: 80%;
+        }
+    }
+    .dropdown {
+        margin-right: 10px;
+        background: #252a34;
+        color: #fff;
+        border-radius: 3px;
+        a {
+            color: #fff;
+        }
+        .dropdown-menu {
+            min-width: auto;
+            padding: 0;
+            margin: 0;
+            a {
+                background: #262a35;
+                padding: 10px 20px;
+            }
+        }
+    }
+}
+.left-sidebar {
+    background: #262a35;
+}
+.table-header {
+    padding-top: 20px;
+    select {
+        margin-right: 10px;
+        font-size: 12px;
+        
+    }
+    button {
+        font-size: 12px;
+        min-width: 60px;
+        text-align: center;
+    }
+}
+.tab-pane {
+    form {
+        padding-top: 10px;
+    }
+}
