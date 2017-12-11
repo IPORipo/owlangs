@@ -36,9 +36,31 @@
                                 <!-- <h6 class="card-subtitle">Add class <code>.table</code></h6> -->
                                 <div class="table-responsive">
                                     <table class="table">
+                                    <div class="table-header d-flex justify-content-start">
+                                        <div class="form-group d-flex">
+                                        <div class="col-sm-12 d-flex">
+                                            <select class="form-control form-control-line">
+                                                <option>Bulk Actions</option>
+                                                <option>Spam</option>
+                                                <option>Delete</option>
+                                            </select>
+                                            <button class="btn waves-effect waves-light btn-info ">Apply</button>
+                                        </div>
+                                        <div class="col-sm-12 d-flex">
+                                            <select class="form-control form-control-line">
+                                                <option>All Dates</option>
+                                                <option>September 2017</option>
+                                            </select>
+                                            <button class="btn waves-effect waves-light btn-info ">Sort</button>
+                                        </div>
+                                    </div>
+                                    </div>
                                         <thead>
                                             <tr>
-                                                <th> <a href="{{ route('users','desc') }}">#</a></th>
+                                                 <th>
+                                                    <input type="checkbox" aria-label="Checkbox for following text input">
+                                                </th>
+                                                <th><a href="{{ route('users','desc') }}">#</a></th>
                                                 <th>Name</th>
                                                 <th>Email</th>
                                                 <th>Role</th>
