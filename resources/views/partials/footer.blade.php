@@ -6,9 +6,9 @@
                     <h3 class="hidden">@lang("Nawigacja")</h3>
     
                     <ul class="d-flex justify-content-center">
-                        <li><a href="{{route('privacy-policy')}}">@lang("POLITYKA PRYWATNOŚCI")</a></li>
-                        <li><a href="{{route('terms-and-conditions')}}">@lang("REGULAMIN")</a></li>
-                        <li><a href="{{route('contact')}}">@lang("KONTAKT")</a></li>
+                        <li><a href="{{route('privacy-policy')}}">@lang("en.privacy policy")</a></li>
+                        <li><a href="{{route('terms-and-conditions')}}">@lang("terms and conditions")</a></li>
+                        <li><a href="{{route('usercontact')}}">@lang("contact")</a></li>
                     </ul>
                 </nav>
     
