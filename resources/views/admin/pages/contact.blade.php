@@ -1,7 +1,7 @@
 @extends('admin.layouts.master')
 
 @section('title')
-  Users
+  Contact
 @endsection
 
 @section('content')

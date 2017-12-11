@@ -1,9 +1,9 @@
 @extends('admin.layouts.master')
 
 @section('title')
-  
+  Dashboard
 @endsection
-
+   
 @section('content')
   <div class="preloader">
         <div class="loader">
