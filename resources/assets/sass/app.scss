@@ -44,8 +44,8 @@ header {
 							outline: 0;
 							box-shadow: 0 0 0 0.2rem rgba(235, 159, 38, 0.25);
 					}
-					button {
-						 border-radius: 2px;
+					button{
+						border-radius: 2px;
 						@include railway(400,12px);
 						padding: 2px 20px;
 						text-transform: uppercase;

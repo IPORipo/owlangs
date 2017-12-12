@@ -18,13 +18,15 @@
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">@lang('login')</button>
                 </form>
                 @else
-                <form class="form-inline my-2 my-lg-0" method="POST" action="{{ route('logout') }}">
+                <form class="form-inline my-2 my-lg-0" method="POST" style = "padding-top:2px" action="{{ route('logout') }}">
                     {{ csrf_field() }}
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">@lang('en.logout')</button>
-                    <a href="" style = "margin-left:10px">
-                        <button class="btn btn-outline-success my-2 my-sm-0" > @lang('admin')</button>
-                    </a>
                 </form>
+                @if(Auth::user()->role_id == 1 )
+                <form action="{{route('admin')}}" method="get"  style = "margin-left:10px">
+                        <button id="adminbutton" class="btn btn-outline-success my-2 my-sm-0" > @lang('admin')</button>
+                </form>
+                @endif
                 @endif
                 <div class="dropdown show">
                     @if(App::isLocale('en'))

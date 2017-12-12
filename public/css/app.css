@@ -331,7 +331,7 @@ header .navbar #navbarSupportedContent .dropdown .dropdown-menu a {
 }
 
 #testimonials {
-  background: url(../images/tlo_ludzie_pom.jpg) no-repeat;
+  background: url(/images/tlo_ludzie_pom.jpg) no-repeat;
   background-size: cover;
   padding: 30px 0;
   text-align: center;
@@ -390,7 +390,7 @@ footer span {
 }
 
 #contact-block {
-  background: url(../images/background_film.jpg) center no-repeat;
+  background: url(/images/background_film.jpg) center no-repeat;
   background-size: cover;
   padding: 50px 0;
 }
