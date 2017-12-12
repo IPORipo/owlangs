@@ -18,13 +18,14 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function (){
 
     Route::get('/contact',function(){
         return view('pages.contact');
-    });
+    })->name('usercontact');
     Route::get('/privacy-policy', function(){
         return view('pages.privacy-policy');
     })->name('privacy-policy');
     Route::get('/terms-and-conditions', function(){
         return view('pages.terms-and-conditions');
-    })->name('terms-and-conditions');
+    });
+    
     Route::group(['middleware' => ['admin']], function () {
         
         Route::group(['prefix' => 'admin'],function(){
@@ -46,7 +47,6 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function (){
 
    
     });
-  
     
     
 });
