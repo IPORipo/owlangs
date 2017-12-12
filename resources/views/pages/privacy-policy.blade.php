@@ -10,9 +10,9 @@
             <div class="row">
                 <div class="col-xs-12">
                     
-                    <p style="text-align: left" id="content"><p>Polityka prywatności serwisu OWLANGS.COM</p>
+                    <p style="text-align: left" id="content"><p>Polityka prywatności serwisu OWLANGS.COM</p> 
 
-<p>1. Informacje ogólne.</p>
+<p>1. Informacje ogólne.</p>			
 
 <ol>
 	<li>

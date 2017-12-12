@@ -15,7 +15,7 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function (){
     Route::get('/', function () {
         return view('pages.home');
     })->name('home');
-    
+
     Route::get('/contact',function(){
         return view('pages.contact');
     })->name('usercontact');
@@ -26,21 +26,33 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function (){
 
     Route::get('/terms-and-conditions', function(){
         return view('pages.terms-and-conditions');
-    })->name('terms-and-conditions');
+    });
     
     Route::group(['middleware' => ['admin']], function () {
-        // get admin page
-        Route::get('/admin',function(){
-            return view('admin.pages.index');
-        })->name('admin');
-        //get users list
-        Route::get('/admin/users','admin\UsersController@getUsers')->name('users');
-        Route::get('/admin/contact','admin\ContactController@index')->name('contact');
-        Route::post('/admin/contact-update-admin-info','admin\ContactController@updateAdmin')->name('updateAdmin');
+        
+        Route::group(['prefix' => 'admin'],function(){
+            // admin routes
+            Route::get('/',function(){
+                return view('admin.pages.index');
+            })->name('admin');
+            
+            //user routes  
+            Route::get('/users','admin\UsersController@getUsers')->name('users');
+            //contact routes
+            Route::get('/contact','admin\ContactController@index')->name('contact');
+            Route::post('/contact-update-admin-info','admin\ContactController@updateAdmin')->name('updateAdmin');
+            
+            // translation routes
+            Route::get('/translations','admin\TranslationController@index')->name('translations');
+            
+        });
+
+   
     });
     Route::get('/admin', function(){
         return view('admin.pages.index');
-    })->name('admin');
+    });
+    
 });
 
 Route::get('/addcontact','admin\ContactController@addContact')->name('addcontact');

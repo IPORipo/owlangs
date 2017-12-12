@@ -1,7 +1,7 @@
 @extends('admin.layouts.master')
 
 @section('title')
-  Users
+  Contact
 @endsection
 
 @section('content')
@@ -83,7 +83,17 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-
+                                            @foreach($messages as $k => $message)
+                                            <tr>
+                                                <td>{{$k+1}}</td>
+                                                <td>{{$message->name}}</td>
+                                                <td>{{$message->email}}</td>
+                                                <td>{{$message->subject}}</td>
+                                                <td>{{$message->message}}</td>
+                                                <td>{{$message->created_at}}</td>
+                                            </tr>
+                                            {{ $messages->links() }}
+                                            @endforeach
                                         </tbody>
                                     </table>
                                 </div>
