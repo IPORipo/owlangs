@@ -5,7 +5,6 @@
 @endsection
 
 @section('content')
-  
   <div class="page-wrapper">
             <!-- ============================================================== -->
             <!-- Container fluid  -->
@@ -66,26 +65,33 @@
                                                     <button class="btn waves-effect waves-light btn-info ">Sort</button>
                                                 </div>
                                                 <div class="col-sm-4 d-flex">
-                                                  <input type="text" class="form-control" placeholder="search"> 
+                                                  <input type="text" id="saerch-text" class="form-control" placeholder="search"> 
                                                 </div>
                                             </div>
                                             </div>
-                                            <table class="table">
-                                                <thead>
-                                                    <tr>
-                                                        <th>Source Text</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>
-                                                            This is source text
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
+                                            <div class="message-box contact-box" style="
+                                                        height: 200px;
+                                                        overflow: scroll;
+                                                        ">
+                                                        <div class="message-widget contact-widget">
+                                                            <!-- Message -->
+                                                            @foreach($langs_en as $key_en => $lang_en)
+                                                            <a href="#">
+                                                                <div class="mail-contnet">
+                                                                    <span class="mail-desc">
+                                                                        {{ strip_tags($key_en) }}
+                                                                    </span>
+                                                                </div>
+                                                            </a>
+                                                            @endforeach
+                                                        </div>
+                                                        
+                                                    </div>
+                                                </div>
+                                                        <div id="language-editor-2">
+                                                             </div>    
                                     </div>
+                                    
                                     <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                                           <div class="table-responsive">
                                             <div class="table-header d-flex justify-content-start">
@@ -113,20 +119,29 @@
                                                 </div>
                                             </div>
                                             </div>
-                                            <table class="table">
-                                                <thead>
-                                                    <tr>
-                                                        <th>Source Text</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>
-                                                            This is source text
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
+                                            <div class="card">
+                                                    <div class="message-box contact-box" style="
+                                                        height: 200px;
+                                                        overflow: scroll;
+                                                        ">
+                                                        <div class="message-widget contact-widget">
+                                                            <!-- Message -->
+                                                            @foreach($langs_pl as $key => $lang_pl)
+                                                            <a href="#">
+                                                                <div class="mail-contnet">
+                                                                    <span class="mail-desc">
+                                                                        {{ strip_tags($key) }}
+                                                                    </span>
+                                                                </div>
+                                                            </a>
+                                                            @endforeach
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="language-editor">
+
+                                                </div>
+                                        </div>
                                         </div>
                                     </div>
                                 </div>
@@ -156,5 +171,6 @@
         <!-- End Page wrapper  -->
         <!-- ============================================================== -->
     </div>
+   
 
 @endsection

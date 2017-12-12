@@ -390,7 +390,7 @@ footer span {
 }
 
 #contact-block {
-  background: url(../images/background_film.jpg) center no-repeat;
+  background: url(/images/background_film.jpg) center no-repeat;
   background-size: cover;
   padding: 50px 0;
 }

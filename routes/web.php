@@ -37,12 +37,10 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function (){
             Route::get('/users','admin\UsersController@getUsers')->name('users');
             //contact routes
             Route::get('/contact','admin\ContactController@index')->name('contact');
-            Route::post('//contact-update-admin-info','admin\ContactController@updateAdmin')->name('updateAdmin');
+            Route::post('/contact-update-admin-info','admin\ContactController@updateAdmin')->name('updateAdmin');
             
             // translation routes
-            Route::get('/translations',function(){
-               return view('admin.pages.translations');
-            })->name('translations');
+            Route::get('/translations','admin\TranslationController@index')->name('translations');
             
         });
 

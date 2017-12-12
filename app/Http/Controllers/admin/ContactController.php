@@ -8,9 +8,10 @@ use App\Contact;
 class ContactController extends Controller
 {
     public function index(){
+        $messages = Contact::paginate(1);
         $file = file_get_contents(base_path() . '/resources/assets/sass/admin/admin-contact.json');
         $contact = json_decode($file, TRUE);
-        return view('admin.pages.contact',['contact'=> $contact]);
+        return view('admin.pages.contact',['contact'=> $contact,'messages' => $messages]);
     }
 
     public function addContact(Request $request){

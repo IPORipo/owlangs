@@ -15,6 +15,7 @@
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{{ asset('css/admin/custom.css') }}">
     @yield('styles')
+
 </head>
 <body>
     @include('admin.partials.header')
@@ -33,6 +34,14 @@
     <script src="{{asset('js/admin/sidebarmenu.js')}}"></script>
     <script src="{{asset('js/admin/custom.min.js')}}"></script>
     <script src="{{asset('js/admin/dashboard.js')}}"></script>
-
+    <script src="{{asset('js/app.js')}}"></script>
+    <script src="{{asset('js/tinymce/tinymce.min.js')}}"></script>
+    <script src="{{asset('js/tinymce/jquery.tinymce.min.js')}}"></script>
+     <script>
+    jQuery(document).ready(function($){
+        tinymce.init({ selector:'#language-editor-2' });
+        tinymce.init({ selector:'#language-editor' });
+    });
+    </script>
 </body>
 </html>
