@@ -12,3 +12,6 @@ npm-debug.log
 yarn-error.log
 .env
 public/mix-manifest.json
+storage/framework/views
+
+storage/framework/views/144bbca3eb42b1252ceb7d9b7ef33bd2a6f865e8.php

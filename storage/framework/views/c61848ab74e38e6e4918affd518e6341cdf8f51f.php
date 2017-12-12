@@ -19,14 +19,16 @@
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><?php echo app('translator')->getFromJson('login'); ?></button>
                 </form>
                 <?php else: ?>
-                <form class="form-inline my-2 my-lg-0" method="POST" action="<?php echo e(route('logout')); ?>">
+                <form class="form-inline my-2 my-lg-0" method="POST" style = "padding-top:2px" action="<?php echo e(route('logout')); ?>">
                     <?php echo e(csrf_field()); ?>
 
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><?php echo app('translator')->getFromJson('en.logout'); ?></button>
-                    <a href="" style = "margin-left:10px">
-                        <button class="btn btn-outline-success my-2 my-sm-0" > <?php echo app('translator')->getFromJson('admin'); ?></button>
-                    </a>
                 </form>
+                <?php if(Auth::user()->role_id == 1 ): ?>
+                <form action="<?php echo e(route('admin')); ?>" method="get"  style = "margin-left:10px">
+                        <button id="adminbutton" class="btn btn-outline-success my-2 my-sm-0" > <?php echo app('translator')->getFromJson('admin'); ?></button>
+                </form>
+                <?php endif; ?>
                 <?php endif; ?>
                 <div class="dropdown show">
                     <?php if(App::isLocale('en')): ?>

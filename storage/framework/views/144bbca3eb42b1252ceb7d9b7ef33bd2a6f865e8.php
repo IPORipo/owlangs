@@ -27,7 +27,6 @@
                                 <input type="text" class="form-control" placeholder="Search & enter"> <a class="srh-btn"><i class="ti-close"></i></a>
                             </form>
                         </li>
-                      
                     </ul>
                     <div class="dropdown show">
                         <a class="btn waves-effect waves-light pull-right hidden-sm-down dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

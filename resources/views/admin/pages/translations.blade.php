@@ -69,19 +69,16 @@
                                                 </div>
                                             </div>
                                             </div>
-                                            <div class="message-box contact-box" style="
+                                            <div class="message-box contact-box" id="english-langs" style="
                                                         height: 200px;
                                                         overflow: scroll;
                                                         ">
                                                         <div class="message-widget contact-widget">
                                                             <!-- Message -->
                                                             @foreach($langs_en as $key_en => $lang_en)
-                                                            <a href="#">
-                                                                <div class="mail-contnet">
-                                                                    <span class="mail-desc">
-                                                                        {{ strip_tags($key_en) }}
-                                                                    </span>
-                                                                </div>
+                                                            <a href="#" class="mail-desc">
+                                                                    <input type="hidden" value="{{$lang_en}}">
+                                                                {{ strip_tags($key_en) }}
                                                             </a>
                                                             @endforeach
                                                         </div>

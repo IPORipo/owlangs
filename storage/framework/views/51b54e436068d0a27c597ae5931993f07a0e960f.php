@@ -67,20 +67,17 @@
                                                 </div>
                                             </div>
                                             </div>
-                                            <div class="message-box contact-box" style="
+                                            <div class="message-box contact-box" id="english-langs" style="
                                                         height: 200px;
                                                         overflow: scroll;
                                                         ">
                                                         <div class="message-widget contact-widget">
                                                             <!-- Message -->
                                                             <?php $__currentLoopData = $langs_en; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key_en => $lang_en): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                                            <a href="#">
-                                                                <div class="mail-contnet">
-                                                                    <span class="mail-desc">
-                                                                        <?php echo e(strip_tags($key_en)); ?>
+                                                            <a href="#" class="mail-desc">
+                                                                    <input type="hidden" value="<?php echo e($lang_en); ?>">
+                                                                <?php echo e(strip_tags($key_en)); ?>
 
-                                                                    </span>
-                                                                </div>
                                                             </a>
                                                             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                                         </div>
