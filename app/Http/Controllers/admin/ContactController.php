@@ -20,8 +20,7 @@ class ContactController extends Controller
     }
     
     public function updateAdmin(Request $request){
-        
-        $path = 'C:\xampp\htdocs\Owlangs\resources\assets\sass\admin\admin-contact.json';
+        $path = base_path('/resources/assets/sass/admin/admin-contact.json');
         $file = file_get_contents($path);
         
         $contact = json_decode($file, TRUE);
