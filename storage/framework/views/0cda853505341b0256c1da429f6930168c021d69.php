@@ -1,6 +1,10 @@
   <header class="topbar">
             <nav class="navbar top-navbar navbar-expand-md navbar-light">
                 <div class="navbar-header">
+                    <a class="navbar-brand" href="<?php echo e(route('admin')); ?>"> 
+                            <img src="<?php echo e(asset('images/logo.png')); ?>" alt="" class="dark-logo" > 
+                            <span> - Admin</span> 
+                    </a> 
                 </div>
                 <!-- ============================================================== -->
                 <div class="navbar-collapse">

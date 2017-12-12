@@ -26,7 +26,7 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function (){
 
     Route::get('/terms-and-conditions', function(){
         return view('pages.terms-and-conditions');
-    });
+    })->name('terms-and-conditions');
     
     Route::group(['middleware' => ['admin']], function () {
         
@@ -46,13 +46,7 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function (){
             Route::get('/translations','admin\TranslationController@index')->name('translations');
             
         });
-
-   
-    });
-    Route::get('/admin', function(){
-        return view('admin.pages.index');
-    });
-    
+    });    
 });
 
 Route::get('/addcontact','admin\ContactController@addContact')->name('addcontact');

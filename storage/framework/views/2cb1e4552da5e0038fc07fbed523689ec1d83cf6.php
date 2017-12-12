@@ -1,5 +1,5 @@
 <?php $__env->startSection('title'); ?>
-  Users
+  Contact
 <?php $__env->stopSection(); ?>
 
 <?php $__env->startSection('content'); ?>
@@ -81,7 +81,18 @@
                                             </tr>
                                         </thead>
                                         <tbody>
+                                            <?php $__currentLoopData = $messages; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $k => $message): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                            <tr>
+                                                <td><?php echo e($k+1); ?></td>
+                                                <td><?php echo e($message->name); ?></td>
+                                                <td><?php echo e($message->email); ?></td>
+                                                <td><?php echo e($message->subject); ?></td>
+                                                <td><?php echo e($message->message); ?></td>
+                                                <td><?php echo e($message->created_at); ?></td>
+                                            </tr>
+                                            <?php echo e($messages->links()); ?>
 
+                                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                         </tbody>
                                     </table>
                                 </div>

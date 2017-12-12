@@ -7,7 +7,6 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon.png">
-    <title>Admin Pro Admin Template - The Ultimate Bootstrap 4 Admin Template</title>
     <link href="<?php echo e(asset('css/admin/style.css')); ?>" rel="stylesheet">
     <link href="<?php echo e(asset('css/admin/dashboard.css')); ?>" rel="stylesheet">
     <link href="<?php echo e(asset('css/admin/default-dark.css')); ?>" id="theme" rel="stylesheet">
@@ -16,6 +15,7 @@
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="<?php echo e(asset('css/admin/custom.css')); ?>">
     <?php echo $__env->yieldContent('styles'); ?>
+
 </head>
 <body>
     <?php echo $__env->make('admin.partials.header', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
@@ -34,6 +34,14 @@
     <script src="<?php echo e(asset('js/admin/sidebarmenu.js')); ?>"></script>
     <script src="<?php echo e(asset('js/admin/custom.min.js')); ?>"></script>
     <script src="<?php echo e(asset('js/admin/dashboard.js')); ?>"></script>
-
+    <script src="<?php echo e(asset('js/app.js')); ?>"></script>
+    <script src="<?php echo e(asset('js/tinymce/tinymce.min.js')); ?>"></script>
+    <script src="<?php echo e(asset('js/tinymce/jquery.tinymce.min.js')); ?>"></script>
+     <script>
+    jQuery(document).ready(function($){
+        tinymce.init({ selector:'#language-editor-2' });
+        tinymce.init({ selector:'#language-editor' });
+    });
+    </script>
 </body>
 </html>
