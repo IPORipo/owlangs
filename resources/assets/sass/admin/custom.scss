@@ -52,3 +52,36 @@
         padding-top: 10px;
     }
 }
+
+.table-footer {
+    padding-top: 20px;
+    .pagination {
+        display: flex;
+        justify-content: center;
+        li {
+            margin-left: 5px;
+            a {
+                background: #262a36;
+                padding: 10px;
+                border-radius: 3px;
+                color: #fff;
+            }
+        }
+        li.active {
+            span {
+                background: #2da1bb;
+                padding: 10px;
+                border-radius: 3px;
+                color: #fff;
+            }
+        }
+        li.disabled {
+            span {
+                 background: #c1c2c3;
+                padding: 10px;
+                border-radius: 3px;
+                color: #fff;
+            }
+        }
+    }
+}
