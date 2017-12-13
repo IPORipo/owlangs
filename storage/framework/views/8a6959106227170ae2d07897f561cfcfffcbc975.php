@@ -9,6 +9,7 @@
                 <div class="col-md-6 contact-form-block">  
                     <h1>Contact Us</h1>  
                     <form action="<?php echo e(route('addcontact')); ?>" method="GET">
+
                         <input type="name" name="name" class="form-control" placeholder="<?php echo app('translator')->getFromJson('name'); ?>">
                         <input type="email" name="email" class="form-control" placeholder="<?php echo app('translator')->getFromJson('email'); ?>">
                         <input type="text" name="subject" class="form-control" placeholder="<?php echo app('translator')->getFromJson('subject'); ?>">
@@ -17,11 +18,11 @@
                     </form>
                 </div>
                 <div class="col-md-6 contact-info-block">
-                    <h4><span>Company Name</span>: New Future sp. z o.o.</h4>
-                    <h4><span>Adress</span>: Krawiecka 3/10, Wrocław 50-148, Poland</h4>
+                    <h4><span><?php echo app('translator')->getFromJson('en.Company name'); ?></span>: <?php echo e($contact['company-name']); ?>.</h4>
+                    <h4><span><?php echo app('translator')->getFromJson('en.address'); ?></span>: <?php echo e($contact['address']); ?></h4>
                     <img src="<?php echo e(asset('images/center.jpg')); ?>" alt="">
-                    <h4>NIP/tax identification number: <strong>8971805495</strong></h4>
-                    <h4>How to contact us:<br>phone: <strong>+48 727 901 680</strong><br>email: <strong><a href="mailto:office@newfuture.company">office@newfuture.company</a></strong>
+                    <h4>NIP/tax <?php echo app('translator')->getFromJson('en.identification number'); ?>: <strong><?php echo e($contact['tax']); ?></strong></h4>
+                    <h4><?php echo app('translator')->getFromJson('en.How to contact us'); ?>:<br><?php echo app('translator')->getFromJson('en.phone'); ?>: <strong><?php echo e($contact['phone']); ?></strong><br>email: <strong><a href="mailto:office@newfuture.company"><?php echo e($contact['admin-mail']); ?></a></strong>
                     </h4>
                 </div>
             </div>

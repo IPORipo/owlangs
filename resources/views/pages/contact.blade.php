@@ -11,6 +11,7 @@
                 <div class="col-md-6 contact-form-block">  
                     <h1>Contact Us</h1>  
                     <form action="{{route('addcontact')}}" method="GET">
+
                         <input type="name" name="name" class="form-control" placeholder="@lang('name')">
                         <input type="email" name="email" class="form-control" placeholder="@lang('email')">
                         <input type="text" name="subject" class="form-control" placeholder="@lang('subject')">
@@ -19,11 +20,11 @@
                     </form>
                 </div>
                 <div class="col-md-6 contact-info-block">
-                    <h4><span>@lang('en.Company name')</span>: New Future sp. z o.o.</h4>
-                    <h4><span>@lang('en.address')</span>: Krawiecka 3/10, Wrocław 50-148, Poland</h4>
+                    <h4><span>@lang('en.Company name')</span>: {{ $contact['company-name'] }}.</h4>
+                    <h4><span>@lang('en.address')</span>: {{ $contact['address'] }}</h4>
                     <img src="{{asset('images/center.jpg')}}" alt="">
-                    <h4>NIP/tax @lang('en.identification number'): <strong>8971805495</strong></h4>
-                    <h4>@lang('en.How to contact us'):<br>@lang('en.phone'): <strong>+48 727 901 680</strong><br>email: <strong><a href="mailto:office@newfuture.company">office@newfuture.company</a></strong>
+                    <h4>NIP/tax @lang('en.identification number'): <strong>{{ $contact['tax'] }}</strong></h4>
+                    <h4>@lang('en.How to contact us'):<br>@lang('en.phone'): <strong>{{ $contact['phone'] }}</strong><br>email: <strong><a href="mailto:office@newfuture.company">{{ $contact['admin-mail'] }}</a></strong>
                     </h4>
                 </div>
             </div>

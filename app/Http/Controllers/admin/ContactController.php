@@ -38,6 +38,14 @@ class ContactController extends Controller
         $contact['phone'] = $phone;
         file_put_contents($path, json_encode($contact));
         
+        //set mail reciever in app env;
+
         return redirect()->back();
+    }
+
+    public function getContact(){
+        $file = file_get_contents(base_path() . '/resources/assets/sass/admin/admin-contact.json');
+        $contact = json_decode($file, TRUE);
+        return view('pages.contact',['contact'=>$contact]);
     }
 }

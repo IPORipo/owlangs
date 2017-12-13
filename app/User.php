@@ -34,4 +34,7 @@ class User extends Authenticatable
     public function getAllUsers(){
         return self::All();
     }
+    public function reviews(){
+        return $this->belongsTo('App\Reviews');
+    }
 }
