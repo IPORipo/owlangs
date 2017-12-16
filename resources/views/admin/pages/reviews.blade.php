@@ -74,13 +74,6 @@
                                                         overflow: scroll;
                                                         ">
                                                         <div class="message-widget contact-widget">
-                                                            <!-- Message -->
-                                                            @foreach($langs_en as $key_en => $lang_en)
-                                                            <a href="#" class="mail-desc">
-                                                                    <input type="hidden" value="{{$lang_en}}">
-                                                                {{ strip_tags($key_en) }}
-                                                            </a>
-                                                            @endforeach
                                                         </div>
                                                         
                                                     </div>
@@ -122,22 +115,11 @@
                                                         overflow: scroll;
                                                         ">
                                                         <div class="message-widget contact-widget">
-                                                            <!-- Message -->
-                                                            @foreach($langs_pl as $key => $lang_pl)
-                                                            <a href="#">
-                                                                <div class="mail-contnet">
-                                                                    <span class="mail-desc">
-                                                                        {{ strip_tags($key) }}
-                                                                    </span>
-                                                                </div>
-                                                            </a>
-                                                            @endforeach
+                                                           
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div id="language-editor">
-
-                                                </div>
+                                               
                                         </div>
                                         </div>
                                     </div>

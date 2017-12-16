@@ -38,6 +38,8 @@ class ContactController extends Controller
         $contact['phone'] = $phone;
         file_put_contents($path, json_encode($contact));
         
+        //set mail reciever in app env;
+
         return redirect()->back();
     }
     public function delete(Request $request){

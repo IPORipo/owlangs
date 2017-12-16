@@ -74,35 +74,49 @@
                                         <div class="col-md-12">
                                             <input type="text" placeholder="admin@mail.com" class="form-control form-control-line" name="email" value={{ $contact['admin-mail'] }}>
                                         </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="example-email" class="col-md-12">Company Name</label>
-                                        <div class="col-md-12">
-                                            <input type="text" placeholder="company name" class="form-control form-control-line" name="company-name" id="example-email" value="{{ $contact['company-name'] }}">
+                                        <div class="form-group">
+                                            <label for="example-email" class="col-md-12">Company Name</label>
+                                            <div class="col-md-12">
+                                                <input type="text" placeholder="company name" class="form-control form-control-line" name="company-name" id="example-email" value="{{ $contact['company-name'] }}">
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-md-12">Address</label>
-                                        <div class="col-md-12">
-                                            <input type="text" name="address" placeholder="address" class="form-control form-control-line" value="{{ $contact['address'] }}">
+                                        <div class="form-group">
+                                            <label class="col-md-12">Address</label>
+                                            <div class="col-md-12">
+                                                <input type="text" name="address" placeholder="address" class="form-control form-control-line" value="{{ $contact['address'] }}">
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-md-12">Tax Number</label>
-                                        <div class="col-md-12">
-                                            <input type="text" placeholder="Tax Number" name="tax" class="form-control form-control-line" value="{{ $contact['tax'] }}">
+                                        <div class="form-group">
+                                            <label class="col-md-12">Tax Number</label>
+                                            <div class="col-md-12">
+                                                <input type="text" placeholder="Tax Number" name="tax" class="form-control form-control-line" value="{{ $contact['tax'] }}">
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-md-12">Phone</label>
-                                        <div class="col-md-12">
-                                            <input type="text"  name="phone" placeholder="phone" class="form-control form-control-line" value="{{ $contact['phone'] }}">
-                                            {{ csrf_field() }}
+                                        <div class="form-group">
+                                            <label class="col-md-12">Phone</label>
+                                            <div class="col-md-12">
+                                                <input type="text"  name="phone" placeholder="phone" class="form-control form-control-line" value="{{ $contact['phone'] }}">
+                                                {{ csrf_field() }}
+                                            </div>
                                         </div>
+                                        <div class="form-group">
+                                            <div class="col-sm-12">
+                                                <button class="btn btn-success" type="submit">Update Profile</button>
+                                            </div>
+                                        </div>
+                                    </form>
                                     </div>
-                                    <div class="form-group">
-                                        <div class="col-sm-12">
-                                            <button class="btn btn-success" type="submit">Update Profile</button>
+                                    <div class="tab-pane fade" id="message" role="tabpanel" aria-labelledby="profile-tab">
+                                        <div class="card-body">
+                                            <h4 class="card-title"><span class="lstick"></span> Message sender</h4>
+                                            <h6>Subject</h6>
+                                            <div class="date">sent: 07/12/2017</div>
+                                            <div class="message-text">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum mollitia nobis cum. Assumenda dignissimos adipisci nam itaque, commodi in temporibus quidem at aliquam natus modi, accusamus alias. Autem, similique error.
+                                            </div>
+                                            <div class="message-footer">
+                                                <button class="btn waves-effect waves-light btn-danger pull-right">Delete</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </form>

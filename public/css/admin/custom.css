@@ -59,3 +59,41 @@
 .tab-pane form {
   padding-top: 10px;
 }
+
+.table-footer {
+  padding-top: 20px;
+}
+
+.table-footer .pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.table-footer .pagination li {
+  margin-left: 5px;
+}
+
+.table-footer .pagination li a {
+  background: #262a36;
+  padding: 10px;
+  border-radius: 3px;
+  color: #fff;
+}
+
+.table-footer .pagination li.active span {
+  background: #2da1bb;
+  padding: 10px;
+  border-radius: 3px;
+  color: #fff;
+}
+
+.table-footer .pagination li.disabled span {
+  background: #c1c2c3;
+  padding: 10px;
+  border-radius: 3px;
+  color: #fff;
+}

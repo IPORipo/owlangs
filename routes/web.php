@@ -16,15 +16,13 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function (){
     Route::get('/', function () {
         return view('pages.home');
     })->name('home');
-
-    Route::get('/contact',function(){
-        return view('pages.contact');
-    })->name('usercontact');
+    
+    Route::get('/contact','admin\ContactController@getContact')->name('usercontact');
     
     Route::get('/privacy-policy', function(){
         return view('pages.privacy-policy');
     })->name('privacy-policy');
-
+    
     Route::get('/terms-and-conditions', function(){
         return view('pages.terms-and-conditions');
     })->name('terms-and-conditions');
@@ -33,11 +31,9 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function (){
         
         Route::group(['prefix' => 'admin'],function() {
             // admin routes
-            Route::get('/',function(){
-                return view('admin.pages.index');
-            })->name('admin');
+            Route::get('/','admin\DashboardController@index')->name('admin');
             
-            //user routes  
+            //user routes
             Route::get('/users','admin\UsersController@getUsers')->name('users');
             //contact routes
             Route::get('/contact','admin\ContactController@index')->name('contact');
@@ -48,10 +44,16 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function (){
             
             // translation routes
             Route::get('/translations','admin\TranslationController@index')->name('translations');
+            Route::get('/translations-get-translations','admin\TranslationController@getTranslations')->name('translationsGetTranslations');
             
+<<<<<<< HEAD
 
+=======
+            // reviews routes
+            Route::get('/user-reviews', 'admin\ReviewController@index')->name('user_reviews');
+>>>>>>> master
         });
-    });    
+    });
 });
 
 Route::get('/addcontact','admin\ContactController@addContact')->name('addcontact');

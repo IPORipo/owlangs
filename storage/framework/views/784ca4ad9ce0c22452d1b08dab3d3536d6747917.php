@@ -1,10 +1,8 @@
-@extends('admin.layouts.master')
-
-@section('title')
+<?php $__env->startSection('title'); ?>
   Dashboard
-@endsection
+<?php $__env->stopSection(); ?>
    
-@section('content')
+<?php $__env->startSection('content'); ?>
   <div class="preloader">
         <div class="loader">
             <div class="loader__figure"></div>
@@ -78,14 +76,14 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            @foreach ($users as $user)
+                                            <?php $__currentLoopData = $users; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $user): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                                 <tr>
-                                                    <td style="width:50px;"><span class="round"><img src="{{asset('images/users/1.jpg')}}" alt="user" width="50"></span></td>
+                                                    <td style="width:50px;"><span class="round"><img src="<?php echo e(asset('images/users/1.jpg')); ?>" alt="user" width="50"></span></td>
                                                     <td>
-                                                        <h6>{{ $user->name }}</h6><small class="text-muted">{{ $user->email }}</small></td>
-                                                    <td>{{ $user->created_at->diffForHumans() }}</td>
+                                                        <h6><?php echo e($user->name); ?></h6><small class="text-muted"><?php echo e($user->email); ?></small></td>
+                                                    <td><?php echo e($user->created_at->diffForHumans()); ?></td>
                                                 </tr>
-                                            @endforeach
+                                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                         </tbody>
                                     </table>
                                 </div>
@@ -109,14 +107,14 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            @foreach ($messages as $message)
+                                            <?php $__currentLoopData = $messages; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $message): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                                 <tr>
                                                     <td> 
-                                                        <h6>{{ $message->name }}</h6><small class="text-muted">{{ $message->email }}</small></td>
-                                                    <td>{{ $message->subject }}</td>
-                                                    <td>{{ $message->created_at->diffForHumans() }}</td>
+                                                        <h6><?php echo e($message->name); ?></h6><small class="text-muted"><?php echo e($message->email); ?></small></td>
+                                                    <td><?php echo e($message->subject); ?></td>
+                                                    <td><?php echo e($message->created_at->diffForHumans()); ?></td>
                                                 </tr>
-                                            @endforeach
+                                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                         </tbody>
                                     </table>
                                 </div>
@@ -141,14 +139,14 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            @foreach ($messages as $message)
+                                            <?php $__currentLoopData = $messages; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $message): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                                 <tr>
                                                     <td> 
-                                                        <h6>{{ $message->name }}</h6><small class="text-muted">{{ $message->email }}</small></td>
-                                                    <td>{{ $message->subject }}</td>
-                                                    <td>{{ $message->created_at->diffForHumans() }}</td>
+                                                        <h6><?php echo e($message->name); ?></h6><small class="text-muted"><?php echo e($message->email); ?></small></td>
+                                                    <td><?php echo e($message->subject); ?></td>
+                                                    <td><?php echo e($message->created_at->diffForHumans()); ?></td>
                                                 </tr>
-                                            @endforeach
+                                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                         </tbody>
                                     </table>
                                 </div>
@@ -161,4 +159,5 @@
             <footer class="footer"> © 2017 Admin Pro by wrappixel.com </footer>
         </div>
     </div>
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('admin.layouts.master', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

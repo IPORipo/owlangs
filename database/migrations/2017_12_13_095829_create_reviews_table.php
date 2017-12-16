@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUserMetasTable extends Migration
+class CreateReviewsTable extends Migration
 {
     /**
     * Run the migrations.
@@ -13,13 +13,11 @@ class CreateUserMetasTable extends Migration
     */
     public function up()
     {
-        Schema::create('user_meta', function (Blueprint $table) {
+        Schema::create('reviews', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('user_id');
-            $table->foreign('user_id')->references('id')
-            ->on('users')->onDelete('cascade');
-            $table->string('meta_key');
-            $table->text('meta_value');
+            $table->integer('stars');
+            $table->boolean('pinned_to_testimonial');
+            $table->text('reviw_text');
             $table->timestamps();
         });
     }
@@ -31,6 +29,6 @@ class CreateUserMetasTable extends Migration
     */
     public function down()
     {
-        Schema::dropIfExists('user_metas');
+        Schema::dropIfExists('reviews');
     }
 }

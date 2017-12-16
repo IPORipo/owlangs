@@ -8,6 +8,7 @@
                         <li> <a class="waves-effect waves-dark" href="{{ route('contact') }}" aria-expanded="false"><i class="mdi mdi-account-check"></i><span class="hide-menu">Contact</span></a></li>
                         <li> <a class="waves-effect waves-dark" href="{{ route('users') }}" aria-expanded="false"><i class="mdi mdi-table"></i><span class="hide-menu">Users</span></a></li>
                         <li> <a class="waves-effect waves-dark" href="{{ route('translations') }}" aria-expanded="false"><i class="mdi mdi-earth"></i><span class="hide-menu">Translations</span></a></li>
+                        <li> <a class="waves-effect waves-dark" href="{{ route('user_reviews') }}" aria-expanded="false"><i class="mdi mdi-earth"></i><span class="hide-menu">User reviews</span></a></li>
                     </ul>
                 </nav>
                 <!-- End Sidebar navigation -->
