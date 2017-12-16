@@ -10,6 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+use Illuminate\Http\Request;
 
 Route::group(['prefix' => LaravelLocalization::setLocale()], function (){
     Route::get('/', function () {
@@ -30,7 +31,7 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function (){
     
     Route::group(['middleware' => ['admin']], function () {
         
-        Route::group(['prefix' => 'admin'],function(){
+        Route::group(['prefix' => 'admin'],function() {
             // admin routes
             Route::get('/',function(){
                 return view('admin.pages.index');
@@ -41,10 +42,14 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function (){
             //contact routes
             Route::get('/contact','admin\ContactController@index')->name('contact');
             Route::post('/contact-update-admin-info','admin\ContactController@updateAdmin')->name('updateAdmin');
+            Route::post('/deletecontact','admin\ContactController@delete')->name('deletecontact');
+            
+            Route::get('/getcontact','admin\ContactController@getContact')->name('getcontact');
             
             // translation routes
             Route::get('/translations','admin\TranslationController@index')->name('translations');
             
+
         });
     });    
 });

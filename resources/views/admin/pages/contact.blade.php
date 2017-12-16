@@ -7,56 +7,51 @@
 @section('content')
 
 
-  <div class="page-wrapper">
-            <div class="container-fluid">
-                <div class="row page-titles">
-                    <div class="col-md-5 align-self-center">
-                        <h3 class="text-themecolor">Contact</h3>
-                    </div>
-                   
-                </div>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="card">
-                            <div class="card-body">
-                                <ul class="nav nav-tabs" id="myTab" role="tablist">
-                                    <li class="nav-item">
-                                        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Messages</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Contact Information</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
-                                    </li>
-                                </ul>
-                                <div class="tab-content" id="myTabContent">
-                                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                                    <div class="table-responsive">
+<div class="page-wrapper">
+    <div class="container-fluid">
+        <div class="row page-titles">
+            <div class="col-md-5 align-self-center">
+                <h3 class="text-themecolor">Contact</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-body">
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Messages</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Contact Information</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                <div class="table-responsive">
                                     <div class="table-header d-flex justify-content-start">
                                         <div class="form-group d-flex">
-                                        <div class="col-sm-12 d-flex">
-                                            <select class="form-control form-control-line">
-                                                <option>Bulk Actions</option>
-                                                <option>Spam</option>
-                                                <option>Delete</option>
-                                            </select>
-                                            <button class="btn waves-effect waves-light btn-info ">Apply</button>
+                                            <div class="col-sm-12 d-flex">
+                                                <select id="select_month"  class="form-control form-control-line">
+                                                    <option value = 13 > month</option>
+                                                    @for($i = date('m') ; $i != date('m') - 12 ; $i--)
+                                                    <option value = {{$i}}> {{date('F',mktime(0,0,0,$i) )}}</option>
+                                                    @endfor
+                                                </select>
+                                            </div>
+                                            <div class="col-sm-12 d-flex">
+                                                <button id ="deletemessage" class="btn waves-effect waves-light btn-danger ">Delete Marked</button>
+                                            </div>
                                         </div>
-                                        <div class="col-sm-12 d-flex">
-                                            <select class="form-control form-control-line">
-                                                <option>All Dates</option>
-                                                <option>September 2017</option>
-                                            </select>
-                                            <button class="btn waves-effect waves-light btn-info ">Sort</button>
-                                        </div>
-                                    </div>
                                     </div>
                                     <table class="table">
                                         <thead>
                                             <tr>
                                                 <th>
-                                                    <input type="checkbox" aria-label="Checkbox for following text input">
+                                                    <input id='head_check_box' type="checkbox"> 
                                                 </th>
                                                 <th><a href="{{ route('contact') }}">#</a></th>
                                                 <th>Name</th>
@@ -66,25 +61,14 @@
                                                 <th>Date</th>
                                             </tr>
                                         </thead>
-                                        <tbody>
-                                            @foreach($messages as $k => $message)
-                                            <tr>
-                                                <td>{{$k+1}}</td>
-                                                <td>{{$message->name}}</td>
-                                                <td>{{$message->email}}</td>
-                                                <td>{{$message->subject}}</td>
-                                                <td>{{$message->message}}</td>
-                                                <td>{{$message->created_at}}</td>
-                                            </tr>
-                                            {{ $messages->links() }}
-                                            @endforeach
+                                        <tbody id = "table_body">
                                         </tbody>
                                     </table>
+                                    <button id = "show_more">show more</button>
                                 </div>
-                                </div>
-                               
-                                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                                    <form class="form-horizontal form-material" action="{{ route('updateAdmin') }}" method="post"> 
+                            </div>
+                            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                <form class="form-horizontal form-material" action="{{ route('updateAdmin') }}" method="post"> 
                                     <div class="form-group">
                                         <label class="col-md-12">Admin mail</label>
                                         <div class="col-md-12">
@@ -122,18 +106,80 @@
                                         </div>
                                     </div>
                                 </form>
-                                </div>
-                                </div>
-                                
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <footer class="footer">
-                © 2017 Admin Pro by wrappixel.com
-            </footer>
         </div>
     </div>
-
+    <footer class="footer">
+        © 2017 Admin Pro by wrappixel.com
+    </footer>
+</div>
+</div>
+    <script>
+        window.contact_counter = 0;
+        jQuery(document).ready(function($){
+            $('#head_check_box').on('click',function(e){
+                bool = $(e.target).is(":checked");
+                console.log(bool);
+                array = $('body').find('input[type=checkbox]');
+                for(i=0;i<array.length;i++){
+                    $(array[i]).attr("checked",bool);
+                }
+            });
+            $('#deletemessage').on('click',function(){
+                array = $('body').find('input[type=checkbox]:checked');
+                if(array.length == 0)
+                    return;
+                if(array[0].id == 'head_check_box')
+                    array.splice(0,1);
+                result = [];
+                window.contact_counter-=array.length;
+                for(i = 0; i < array.length ;i++ ){
+                    result.push(array[i].id);
+                }
+                $.post("{{route('deletecontact')}}", {_token:'{{csrf_token()}}',result:result},function(data){
+                    for(i = 0; i < array.length ;i++ ){
+                        $(array[i]).parent().parent().remove();
+                    }
+                });
+            });
+            $('#select_month').on('change',function(e){
+                getMessage($(e.target).val(),-10);
+            });
+            $('#show_more').on('click',function(e){
+                getMessage($('#select_month').val(),contact_counter);
+            });
+            function getMessage(e,i){
+                contact_counter = i += 10;
+                console.log(e,i);
+                $.ajax({
+                    url: "{{route('getcontact')}}",
+                    data: {month : e,i:i},
+                    success:function(data){
+                        contacts = JSON.parse(data);
+                        tb = $('#table_body');
+                        if(i==0)
+                            tb.text('');
+                        for(i=0;i<contacts.length;i++){
+                            tr = $('<tr>');
+                            td = $('<td>');
+                            td.append($("<input type ='checkbox' >").attr("id",contacts[i]['id']));
+                            tr.append(td);
+                            tr.append($('<td>').text(contacts[i]['id']));
+                            tr.append($('<td>').text(contacts[i]['name']));
+                            tr.append($('<td>').text(contacts[i]['email']));
+                            tr.append($('<td>').text(contacts[i]['subject']));
+                            tr.append($('<td>').text(contacts[i]['message']));
+                            tr.append($('<td>').text(contacts[i]['readable']));
+                            tb.append(tr);
+                        }
+                    },
+                });
+            }
+            getMessage(13,-10);
+        });
+    </script>
 @endsection
