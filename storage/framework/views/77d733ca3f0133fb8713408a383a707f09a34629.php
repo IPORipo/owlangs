@@ -15,11 +15,14 @@
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="<?php echo e(asset('css/admin/custom.css')); ?>">
     <?php echo $__env->yieldContent('styles'); ?>
+    <script type="text/javascript">
+        var APP_URL = '<?php echo e(json_encode(url(' / '))); ?>';
+    </script>
       <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="<?php echo e(asset('js/tinymce/jquery.tinymce.min.js')); ?>"></script>
     <script src="<?php echo e(asset('js/tinymce/tinymce.min.js')); ?>"></script>
     <script src="<?php echo e(asset('js/admin/admin.js')); ?>"></script>
-
+    
 </head>
 <body>
     <?php echo $__env->make('admin.partials.header', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

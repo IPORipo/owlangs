@@ -30,9 +30,7 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function (){
         
         Route::group(['prefix' => 'admin'],function(){
             // admin routes
-            Route::get('/',function(){
-                return view('admin.pages.index');
-            })->name('admin');
+            Route::get('/','admin\DashboardController@index')->name('admin');
             
             //user routes
             Route::get('/users','admin\UsersController@getUsers')->name('users');
@@ -42,6 +40,7 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function (){
             
             // translation routes
             Route::get('/translations','admin\TranslationController@index')->name('translations');
+            Route::get('/translations-get-translations','admin\TranslationController@getTranslations')->name('translationsGetTranslations');
             
             // reviews routes
             Route::get('/user-reviews', 'admin\ReviewController@index')->name('user_reviews');

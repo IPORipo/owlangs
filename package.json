@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "holmes.js": "^1.17.3",
-    "list.js": "^1.5.0"
+    "list.js": "^1.5.0",
+    "observer": "0.0.2"
   }
 }
