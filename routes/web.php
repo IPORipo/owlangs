@@ -39,19 +39,13 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function (){
             Route::get('/contact','admin\ContactController@index')->name('contact');
             Route::post('/contact-update-admin-info','admin\ContactController@updateAdmin')->name('updateAdmin');
             Route::post('/deletecontact','admin\ContactController@delete')->name('deletecontact');
-            
-            Route::get('/getcontact','admin\ContactController@getContact')->name('getcontact');
-            
+            Route::get('/getcontact','admin\ContactController@getContact')->name('getcontact');            
             // translation routes
             Route::get('/translations','admin\TranslationController@index')->name('translations');
             Route::get('/translations-get-translations','admin\TranslationController@getTranslations')->name('translationsGetTranslations');
-            
-<<<<<<< HEAD
-
-=======
-            // reviews routes
-            Route::get('/user-reviews', 'admin\ReviewController@index')->name('user_reviews');
->>>>>>> master
+            //review
+            Route::get('/user-reviews','admin\ReviewController@index')->name('user_reviews');
+            Route::post('/review_pinned','admin\ReviewController@change')->name('review_pinned');
         });
     });
 });

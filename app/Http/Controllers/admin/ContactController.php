@@ -22,15 +22,12 @@ class ContactController extends Controller
     public function updateAdmin(Request $request){
         $path = base_path('/resources/assets/sass/admin/admin-contact.json');
         $file = file_get_contents($path);
-        
         $contact = json_decode($file, TRUE);
-        
         $email = $request->input('email');
         $company_name = $request->input('company-name');
         $address = $request->input('address');
         $tax = $request->input('tax');
         $phone = $request->input('phone');
-        
         $contact['admin-mail'] = $email;
         $contact['company-name'] = $company_name;
         $contact['address'] = $address;

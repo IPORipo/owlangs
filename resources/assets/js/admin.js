@@ -1,5 +1,4 @@
 'use strict'
-const Observer = require('observer');
 
 document.onload = (function () {
     //send xhr request onload

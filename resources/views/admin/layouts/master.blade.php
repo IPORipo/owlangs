@@ -18,7 +18,7 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.1.0.min.js" ></script>
     @yield('styles')
-      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="{{asset('js/tinymce/jquery.tinymce.min.js')}}"></script>
     <script src="{{asset('js/tinymce/tinymce.min.js')}}"></script>
     <script src="{{asset('js/admin/admin.js')}}"></script>
@@ -50,6 +50,9 @@
         tinymce.init({ selector:'#language-editor-2' });
         tinymce.init({ selector:'#language-editor' });
     });
+    </script>
+     <script>
+        
     </script>
 </body>
 </html>
