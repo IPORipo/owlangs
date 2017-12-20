@@ -1,10 +1,10 @@
 'use strict'
 const Observer = require('observer');
 
-document.onload = (function () {
-    //send xhr request onload
+jQuery(document).ready(function($){
+     //send xhr request onload
     let lang_object;
-    // let data_key;
+    let data_key;
     function init(){
         $("#profile-tab").on('click', function (e) {
             e.preventDefault();
@@ -17,11 +17,15 @@ document.onload = (function () {
             selector: "#english-box",
             setup: function(ed) {
             ed.on('keyup', function(e) {
-                handleChange(ed.getContent(),lang_object);
+                handleChange(ed.getContent(),ed.id);
                 });
             }
         });
-        tinymce.init({ selector: "#poland-box" });
+        tinymce.init({ selector: "#poland-box" ,setup: function(ed) {
+            ed.on('keyup', function(e) {
+                handleChange(ed.getContent(),ed.id);
+                });
+            }});
     }
     
     function loadData(url) {
@@ -42,10 +46,7 @@ document.onload = (function () {
     });
     loadData("/admin/translations-get-translations").then(data => {
         lang_object = JSON.parse(data);
-        localStorage.setItem('data', data);
-      
         
-        const tableData = JSON.parse(localStorage.getItem('data'));
         const wrapper = $("#english-langs .message-widget");
         const table = $('<table><thead><tr></tr></thead></table>');
         const a = document.createElement('a');
@@ -53,8 +54,8 @@ document.onload = (function () {
         $(wrapper).append(table);
         $(table).append('<tbody></tbody>');
         const tbody = $(table).find('tbody');
-        for (let i in tableData) {
-            $(tbody).append("<tr><td><a href='#' class='key'>" +tableData[i] + "</td></tr>").add('a');
+        for (let i in lang_object['en_langs']) {
+            $(tbody).append("<tr><td><a href='#' class='key'>" +lang_object['en_langs'][i] + "</td></tr>");
         }
         handleClick(tbody);
     });
@@ -69,8 +70,8 @@ document.onload = (function () {
         
         $(a).on('click', function (e) {
             e.preventDefault();
-            let data_key = JSON.stringify(e.target.innerHTML);
-            localStorage.setItem('data_key',data_key)
+            data_key = e.target.innerHTML;
+            
             tab_btn_1.removeClass('active');
             tab_btn_2.addClass('active');
             home_tab.removeClass('active show');
@@ -79,23 +80,45 @@ document.onload = (function () {
             let editor_1 = tinymce.editors[0];
             let editor_2 = tinymce.editors[1];
             
-            editor_1.setContent("[b]some[/b] html", { format: "bbcode" });
-            editor_2.setContent("[b]some[/b] html", { format: "bbcode" });
+            editor_1.setContent(lang_object['en_langs'][data_key], { format: "html" });
+            editor_2.setContent(lang_object['pl_langs'][data_key], { format: "html" });
 
         })
 
     }
-    function handleChange(data) { 
-        let data_key = JSON.parse(localStorage.getItem("data_key"));
-        lang_object[data_key] = data;
-        console.log(lang_object[data_key]);
+    function handleChange(data,id) { 
+        switch(id) {
+            case 'english-box': 
+                lang_object['en_langs'][data_key] = data;
+                break;
+            case 'poland-box': 
+                lang_object['pl_langs'][data_key] = data;
+                break;
+        }
+       
     };
 
     function saveData() {
-        
+        let token = $('input[name=_token]').val()
+        return new Promise((resolve, reject) => {
+            const xhr = new XMLHttpRequest();
+            xhr.open("POST", 'translations-save-translations');
+            xhr.setRequestHeader('Content-Type', 'application/json');
+            xhr.setRequestHeader('X-CSRF-Token', token);
+             xhr.onload = () => {
+               resolve(xhr.responseText);
+             };
+             xhr.onerror = () => {
+               reject(xhr.statusText, xhr.status);
+             };
+             xhr.send(JSON.stringify(lang_object));
+        })
     }
         
-    init();
-   
+    $('#save-btn').on('click',function(e){
+        saveData().then(data => console.log(data));
+    });
 
-})()
+    init();
+  
+}) 

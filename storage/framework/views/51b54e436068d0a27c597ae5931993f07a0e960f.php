@@ -45,7 +45,9 @@
                                             <div class="table-header d-flex justify-content-start">
                                                 <div class="form-group d-flex">
                                                 <div class="col-sm-3 d-flex">
-                                                    <button class="btn waves-effect waves-light btn-info ">Save</button>
+                                                    <button class="btn waves-effect waves-light btn-info " id="save-btn">Save</button>
+                                                    <?php echo e(csrf_field()); ?>
+
                                                 </div>
                                                 <div class="col-sm-8 d-flex">
                                                   <input type="text" id="saerch-text" class="form-control" placeholder="search">

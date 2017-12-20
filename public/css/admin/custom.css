@@ -97,3 +97,12 @@
   border-radius: 3px;
   color: #fff;
 }
+
+#english-box, #poland-box {
+  min-height: 200px;
+  margin-top: 10px;
+}
+
+#mceu_2, #mceu_13 {
+  margin-top: 10px;
+}

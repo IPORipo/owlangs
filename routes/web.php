@@ -41,6 +41,7 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function (){
             // translation routes
             Route::get('/translations','admin\TranslationController@index')->name('translations');
             Route::get('/translations-get-translations','admin\TranslationController@getTranslations')->name('translationsGetTranslations');
+            Route::post('/translations-save-translations','admin\TranslationController@saveTranslations')->name('saveTranslations');
             
             // reviews routes
             Route::get('/user-reviews', 'admin\ReviewController@index')->name('user_reviews');

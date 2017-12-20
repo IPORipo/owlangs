@@ -83,10 +83,10 @@ module.exports = __webpack_require__(5);
 
 var Observer = __webpack_require__(6);
 
-document.onload = function () {
+jQuery(document).ready(function ($) {
     //send xhr request onload
     var lang_object = void 0;
-    // let data_key;
+    var data_key = void 0;
     function init() {
         $("#profile-tab").on('click', function (e) {
             e.preventDefault();
@@ -99,11 +99,15 @@ document.onload = function () {
             selector: "#english-box",
             setup: function setup(ed) {
                 ed.on('keyup', function (e) {
-                    handleChange(ed.getContent(), lang_object);
+                    handleChange(ed.getContent(), ed.id);
                 });
             }
         });
-        tinymce.init({ selector: "#poland-box" });
+        tinymce.init({ selector: "#poland-box", setup: function setup(ed) {
+                ed.on('keyup', function (e) {
+                    handleChange(ed.getContent(), ed.id);
+                });
+            } });
     }
 
     function loadData(url) {
@@ -124,9 +128,7 @@ document.onload = function () {
     });
     loadData("/admin/translations-get-translations").then(function (data) {
         lang_object = JSON.parse(data);
-        localStorage.setItem('data', data);
 
-        var tableData = JSON.parse(localStorage.getItem('data'));
         var wrapper = $("#english-langs .message-widget");
         var table = $('<table><thead><tr></tr></thead></table>');
         var a = document.createElement('a');
@@ -134,8 +136,8 @@ document.onload = function () {
         $(wrapper).append(table);
         $(table).append('<tbody></tbody>');
         var tbody = $(table).find('tbody');
-        for (var i in tableData) {
-            $(tbody).append("<tr><td><a href='#' class='key'>" + tableData[i] + "</td></tr>").add('a');
+        for (var i in lang_object['en_langs']) {
+            $(tbody).append("<tr><td><a href='#' class='key'>" + lang_object['en_langs'][i] + "</td></tr>");
         }
         handleClick(tbody);
     });
@@ -150,8 +152,8 @@ document.onload = function () {
 
         $(a).on('click', function (e) {
             e.preventDefault();
-            var data_key = JSON.stringify(e.target.innerHTML);
-            localStorage.setItem('data_key', data_key);
+            data_key = e.target.innerHTML;
+
             tab_btn_1.removeClass('active');
             tab_btn_2.addClass('active');
             home_tab.removeClass('active show');
@@ -160,20 +162,46 @@ document.onload = function () {
             var editor_1 = tinymce.editors[0];
             var editor_2 = tinymce.editors[1];
 
-            editor_1.setContent("[b]some[/b] html", { format: "bbcode" });
-            editor_2.setContent("[b]some[/b] html", { format: "bbcode" });
+            editor_1.setContent(lang_object['en_langs'][data_key], { format: "html" });
+            editor_2.setContent(lang_object['pl_langs'][data_key], { format: "html" });
         });
     }
-    function handleChange(data) {
-        var data_key = JSON.parse(localStorage.getItem("data_key"));
-        lang_object[data_key] = data;
-        console.log(lang_object[data_key]);
+    function handleChange(data, id) {
+        switch (id) {
+            case 'english-box':
+                lang_object['en_langs'][data_key] = data;
+                break;
+            case 'poland-box':
+                lang_object['pl_langs'][data_key] = data;
+                break;
+        }
     };
 
-    function saveData() {}
+    function saveData() {
+        var token = $('input[name=_token]').val();
+        return new Promise(function (resolve, reject) {
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", 'translations-save-translations');
+            xhr.setRequestHeader('Content-Type', 'application/json');
+            xhr.setRequestHeader('X-CSRF-Token', token);
+            xhr.onload = function () {
+                resolve(xhr.responseText);
+            };
+            xhr.onerror = function () {
+                reject(xhr.statusText, xhr.status);
+            };
+            xhr.send(JSON.stringify(lang_object));
+        });
+    }
+
+    $('#save-btn').on('click', function (e) {
+        saveData().then(function (data) {
+            return console.log(data);
+        });
+    });
 
     init();
-}();
+});
 
 /***/ }),
 /* 6 */
