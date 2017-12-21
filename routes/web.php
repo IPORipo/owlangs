@@ -15,6 +15,10 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function (){
     Route::get('/', function () {
         return view('pages.home');
     })->name('home');
+    Route::get('angular', function () {
+        // return view('pages.home');
+        return File::get(base_path() . '/public/user/index.html');
+    })->name('user');
     
     Route::get('/contact','admin\ContactController@getContact')->name('usercontact');
     
