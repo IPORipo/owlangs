@@ -8,7 +8,7 @@ use App\Contact;
 class ContactController extends Controller
 {
     public function index(){
-        $messages = Contact::paginate(1);
+        $messages = Contact::limit(10)->get();
         $file = file_get_contents(base_path() . '/resources/assets/sass/admin/admin-contact.json');
         $contact = json_decode($file, TRUE);
         return view('admin.pages.contact',['contact'=> $contact,'messages' => $messages]);
@@ -22,15 +22,12 @@ class ContactController extends Controller
     public function updateAdmin(Request $request){
         $path = base_path('/resources/assets/sass/admin/admin-contact.json');
         $file = file_get_contents($path);
-        
         $contact = json_decode($file, TRUE);
-        
         $email = $request->input('email');
         $company_name = $request->input('company-name');
         $address = $request->input('address');
         $tax = $request->input('tax');
         $phone = $request->input('phone');
-        
         $contact['admin-mail'] = $email;
         $contact['company-name'] = $company_name;
         $contact['address'] = $address;
@@ -42,10 +39,22 @@ class ContactController extends Controller
 
         return redirect()->back();
     }
-
-    public function getContact(){
-        $file = file_get_contents(base_path() . '/resources/assets/sass/admin/admin-contact.json');
-        $contact = json_decode($file, TRUE);
-        return view('pages.contact',['contact'=>$contact]);
+    public function delete(Request $request){
+        $result = $request->result;
+        for($i = 0; $i < count($result) ; $i++){
+            Contact::find($result[$i])->delete();
+        }
+    }
+    public function getContact(Request $request){
+        $month = $request->month;
+        $i = $request->i;
+        if($month == 13)
+            $contacts = Contact::skip($i)->take(10)->get();
+        else
+            $contacts = Contact::whereMonth('created_at',$month)->skip($i)->take(10)->get();
+        foreach($contacts as $contact){
+            $contact->readable = $contact->created_at->diffForHumans();
+        }
+        return json_encode($contacts);
     }
 }

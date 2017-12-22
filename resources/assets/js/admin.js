@@ -1,5 +1,4 @@
 'use strict'
-const Observer = require('observer');
 
 jQuery(document).ready(function($){
      //send xhr request onload
@@ -120,5 +119,6 @@ jQuery(document).ready(function($){
     });
 
     init();
-  
-}) 
+   
+
+})()

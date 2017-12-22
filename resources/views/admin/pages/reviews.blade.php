@@ -1,155 +1,75 @@
 @extends('admin.layouts.master')
 
 @section('title')
-   Translations
+   Reviews
 @endsection
 
 @section('content')
-  <div class="page-wrapper">
-            <!-- ============================================================== -->
-            <!-- Container fluid  -->
-            <!-- ============================================================== -->
-            <div class="container-fluid">
-                <!-- ============================================================== -->
-                <!-- Bread crumb and right sidebar toggle -->
-                <!-- ============================================================== -->
-                <div class="row page-titles">
-                    <div class="col-md-5 align-self-center">
-                        <h3 class="text-themecolor">Translations</h3>
-                    </div>
-                   
-                </div>
-                <!-- ============================================================== -->
-                <!-- End Bread crumb and right sidebar toggle -->
-                <!-- ============================================================== -->
-                <!-- ============================================================== -->
-                <!-- Start Page Content -->
-                <!-- ============================================================== -->
-                <div class="row">
-                    <!-- column -->
-                    <div class="col-lg-12">
-                        <div class="card">
-                            <div class="card-body">
-                                <!-- <h4 class="card-title">Basic Table</h4> -->
-                                <!-- <h6 class="card-subtitle">Add class <code>.table</code></h6> -->
-                                
-                                <ul class="nav nav-tabs" id="myTab" role="tablist">
-                                    <li class="nav-item">
-                                        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">English</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Poland</a>
-                                    </li>
-                                </ul>
-                                <div class="tab-content" id="myTabContent">
-                                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                                            <div class="table-responsive">
-                                            <div class="table-header d-flex justify-content-start">
-                                                <div class="form-group d-flex">
-                                                <div class="col-sm-1 d-flex">
-                                                    <button class="btn waves-effect waves-light btn-info ">Save</button>
-                                                </div>
-                                                <div class="col-sm-3 d-flex">
-                                                    <select class="form-control form-control-line">
-                                                        <option>Bulk Actions</option>
-                                                        <option>Spam</option>
-                                                        <option>Delete</option>
-                                                    </select>
-                                                    <button class="btn waves-effect waves-light btn-info ">Apply</button>
-                                                </div>
-                                                <div class="col-sm-3 d-flex">
-                                                    <select class="form-control form-control-line">
-                                                        <option>All Dates</option>
-                                                        <option>September 2017</option>
-                                                    </select>
-                                                    <button class="btn waves-effect waves-light btn-info ">Sort</button>
-                                                </div>
-                                                <div class="col-sm-4 d-flex">
-                                                  <input type="text" id="saerch-text" class="form-control" placeholder="search"> 
-                                                </div>
-                                            </div>
-                                            </div>
-                                            <div class="message-box contact-box" id="english-langs" style="
-                                                        height: 200px;
-                                                        overflow: scroll;
-                                                        ">
-                                                        <div class="message-widget contact-widget">
-                                                        </div>
-                                                        
-                                                    </div>
-                                                </div>
-                                                        <div id="language-editor-2">
-                                                             </div>    
-                                    </div>
-                                    
-                                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                                          <div class="table-responsive">
-                                            <div class="table-header d-flex justify-content-start">
-                                                <div class="form-group d-flex">
-                                                 <div class="col-sm-1 d-flex">
-                                                    <button class="btn waves-effect waves-light btn-info ">Save</button>
-                                                </div>
-                                                <div class="col-sm-3 d-flex">
-                                                    <select class="form-control form-control-line">
-                                                        <option>Bulk Actions</option>
-                                                        <option>Spam</option>
-                                                        <option>Delete</option>
-                                                    </select>
-                                                    <button class="btn waves-effect waves-light btn-info ">Apply</button>
-                                                </div>
-                                                <div class="col-sm-3 d-flex">
-                                                    <select class="form-control form-control-line">
-                                                        <option>All Dates</option>
-                                                        <option>September 2017</option>
-                                                    </select>
-                                                    <button class="btn waves-effect waves-light btn-info ">Sort</button>
-                                                </div>
-                                                <div class="col-sm-4 d-flex">
-                                                  <input type="text" class="form-control" placeholder="search"> 
-                                                </div>
-                                            </div>
-                                            </div>
-                                            <div class="card">
-                                                    <div class="message-box contact-box" style="
-                                                        height: 200px;
-                                                        overflow: scroll;
-                                                        ">
-                                                        <div class="message-widget contact-widget">
-                                                           
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                               
-                                        </div>
+<div class="page-wrapper">
+    <div class="container-fluid">
+        <div class="row page-titles">
+            <div class="col-md-5 align-self-center">
+                <h3 class="text-themecolor">Reviews</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                <div class="table-responsive">
+                                    <div class="table-header d-flex justify-content-start">
+                                        <div class="form-group d-flex">
+                                            <table class="table">
+                                                <thead>
+                                                <tr>
+                                                    <th>ID</th>
+                                                    <th>User</th>
+                                                    <th>Text</th>
+                                                    <th>Rate</th>
+                                                    <th>Created</th>
+                                                    <th>Pinned</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                @foreach($reviews as $review)
+                                                    <tr>
+                                                        <td>{{$review->id}}</td>
+                                                        <td>{{$review->user->name}}</td>
+                                                        <td>{{$review->text}}</td>
+                                                        <td>{{$review->rate}}</td>
+                                                        <td>{{$review->created_at->diffForHumans()}}</td>
+                                                        <td>
+                                                            <input id='{{$review->id}}' type="checkbox" @if($review->pinned == 1) checked @endif>
+                                                        </td>
+                                                    </tr>
+                                                @endforeach
+                                                </tbody>
+                                            </table>
                                         </div>
                                     </div>
                                 </div>
-                                
                             </div>
-                        </div>
+                        </div>                                
                     </div>
                 </div>
-                <!-- ============================================================== -->
-                <!-- End PAge Content -->
-                <!-- ============================================================== -->
             </div>
-            <!-- ============================================================== -->
-            <!-- End Container fluid  -->
-            <!-- ============================================================== -->
-            <!-- ============================================================== -->
-            <!-- footer -->
-            <!-- ============================================================== -->
-            <footer class="footer">
-                © 2017 Admin Pro by wrappixel.com
-            </footer>
-            <!-- ============================================================== -->
-            <!-- End footer -->
-            <!-- ============================================================== -->
         </div>
-        <!-- ============================================================== -->
-        <!-- End Page wrapper  -->
-        <!-- ============================================================== -->
     </div>
-   
-
+    <footer class="footer">
+        © 2017 Admin Pro by wrappixel.com
+    </footer>
+    <script>
+        jQuery(document).ready(function($){
+            $('input').on('change',function(e){
+                $.ajax({
+                    type:"POST",
+                    url:"{{route('review_pinned')}}",
+                    data:{pinned:($(e.target).is(":checked"))?1:0,id:$(e.target).attr('id'),_token:'{{csrf_token()}}'},
+                });
+            });
+        });
+    </script>
+</div>
 @endsection
