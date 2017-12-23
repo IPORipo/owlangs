@@ -1,0 +1,83 @@
+@mixin mainGradient(){
+  background: #9D50BB;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #6E48AA, #9D50BB);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #6E48AA, #9D50BB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+@import url('https://fonts.googleapis.com/css?family=Lato:300,300i,400,700|Roboto');
+
+@mixin roboto($weight){
+  font-family: 'Roboto', sans-serif;
+  font-weight: $weight;
+}
+
+@mixin lato($weight){
+  font-family: 'Lato', sans-serif;
+  font-weight: $weight;
+}
+
+
+.navbar {
+  @include mainGradient();
+  .navbar-logo {
+    text-align: center;
+    img {
+      width: 50%;
+    }
+  }
+  form {
+      position: relative;
+      input {
+        height: 30px;
+        border-radius: 2px;
+        width: 450px;
+        font-size: 12px;
+        @include lato(300);
+
+      }
+      input:focus {
+        border-color: #f49500;
+        box-shadow: 0 0 0 0.2rem rgba(244, 149, 0, 0.15);
+      }
+      button  {
+        color: #7b49b6;
+        background: #eee;
+        border: none;
+        border-radius: 2px;
+        height: 28px;
+        padding: 0 18px;
+        position: absolute;
+        right: 8px;
+        cursor: pointer;
+      }
+      button:hover {
+        background: #f1efef;
+      }
+  }
+  .navbar-nav {
+    width: 100%;
+    justify-content: flex-end;
+    li {
+      a {
+        color: #e6ecf1;
+        position: relative;
+        i {
+          // color: #f49900;
+          color: #fff;
+        }
+        i:hover {
+          color:#e6ecf1;
+        }
+      }
+      a:hover {
+        color: #fff;
+
+        .help-tip  {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

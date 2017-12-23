@@ -1,4 +1,100 @@
 <app-header></app-header>
-<p>
-  home works!
-</p>
+<div class="container-fluid" id="main">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="user-block">
+          <div class="user-image">
+            <a href="#" class="user-img"><i class="fa fa-camera-retro" aria-hidden="true"></i>
+            </a>
+          </div>
+          <div class="user-info">
+              <h3>Guram</h3>
+              <h4>@Guram</h4>
+
+          </div>
+        </div>
+        <div class="navigation">
+          <h3>Navigation</h3>
+          <ul>
+            <li><a href="#"><i class="fa fa-book" aria-hidden="true"></i> Words</a></li>
+            <li><a href="#"><i class="fa fa-file-excel-o" aria-hidden="true"></i>Excercices</a></li>
+            <li><a href="#"><i class="fa fa-briefcase" aria-hidden="true"></i>Jobs</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="make-post">
+          <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">post a word</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">post an excercise </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">post a chalange</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">post a job</a>
+            </li>
+          </ul>
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+              <div class="editor d-flex">
+                  <i class="fa fa-user-circle" aria-hidden="true"></i>
+                  <p>Write a word</p>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                <div class="editor d-flex">
+                    <i class="fa fa-user-circle" aria-hidden="true"></i>
+                    <p>Post an experience</p>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                <div class="editor d-flex">
+                    <i class="fa fa-user-circle" aria-hidden="true"></i>
+                    <p>Post an chalange</p>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="friends-online">
+          <h3>Friends online</h3>
+          <div class="friends-list">
+            <div class="friend">
+             <div class="header">
+                <img src="https://pbs.twimg.com/profile_images/897379868014411777/xpJaG4a5_bigger.jpg" alt="">
+                <div class="details">
+                  <h4>BBC Sport</h4>
+                  <button class="btn" >Message</button>
+                </div>
+             </div>
+            </div>
+            <div class="friend">
+             <div class="header">
+                <img src="https://pbs.twimg.com/profile_images/918856427380211713/tZX3DB2h_bigger.jpg" alt="">
+                <div class="details">
+                  <h4>Barnacules Nerdgasm</h4>
+                  <button class="btn" >Message</button>
+                </div>
+             </div>
+            </div>
+            <div class="friend">
+             <div class="header">
+                <img src="https://pbs.twimg.com/profile_images/664516834301898752/5yEyTA0E_bigger.jpg" alt="">
+                <div class="details">
+                  <h4>Josh Nerdgasm</h4>
+                  <button class="btn" >Message</button>
+                </div>
+             </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
