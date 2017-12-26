@@ -1,0 +1,47 @@
+@import 'theme_vars';
+
+
+// friends online
+.friends-online {
+  background: #fff;
+  border-radius: 2px;
+  h3 {
+    font-size:18px;
+    @include lato(500);
+    padding: 10px;
+    padding-bottom: 0;
+  }
+  .friends-list {
+    .friend {
+      padding-bottom: 10px;
+      border-bottom: 1px solid #eee;
+      padding-top: 10px;
+     .header {
+        display: flex;
+        img {
+          border-radius: 50%;
+          margin: 0 10px;
+          width: 18%;
+          height: 100%;
+        }
+        h4 {
+          font-size: 14px;
+          @include lato(700);
+        }
+        button {
+          border: 1px solid #efd125;
+          border-radius: 20px;
+          margin-left: -5px;
+          color: #efd125;
+          font-size: 12px;
+          padding: 5px 20px;
+          cursor: pointer;
+        }
+        button:hover {
+          background: #f0d43473;
+          color: #fff;
+        }
+      }
+    }
+  }
+}

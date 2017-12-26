@@ -1,0 +1,80 @@
+@import 'theme_vars';
+
+.user-profile {
+  background: #e6ecf1;
+  min-height: 175px;
+  #user-img {
+    position: relative;
+   a{
+      width: 200px;
+      height: 200px;
+      display: block;
+      top: 50px;
+      border-radius: 50%;
+      text-align: center;
+      background: #9D50BB;
+      background: linear-gradient(to top, #6E48AA, #9D50BB);
+      position: absolute;
+      bottom: -34px;
+      left: 10px;
+      border: 5px solid #fff;
+      i {
+        font-size: 56px;
+        line-height: 200px;
+        color: #fff;
+      }
+    }
+   }
+}
+.user-nav {
+  @include mainGradient();
+  ul.nav {
+    li {
+      a {
+        @include lato(500);
+        color: #fff;
+        display:inline-block;
+        font-size: 14px;
+        padding:10px 20px;
+        line-height: 40px;
+        text-transform: capitalize;
+        position: relative;
+        text-align: center;
+      }
+      a:hover {
+        text-decoration: none;
+      }
+      a:before {
+        height: 3px;
+        background: #fff;
+        display: block;
+        left: 0;
+        content: "";
+        visibility:hidden;
+        transition: all 0.2s ease-in-out;
+        opacity: 0;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+      }
+      a:hover::before {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+}
+.user-info {
+  h3 {
+    @include lato(700);
+    margin-top: 20px;
+    font-size: 22px;
+  }
+  .date {
+    i {
+      margin-right:10px;
+    }
+    color: #819eb5;
+    font-size: 14px;
+  }
+}

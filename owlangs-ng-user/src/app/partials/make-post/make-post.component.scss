@@ -1,0 +1,53 @@
+@import 'theme_vars';
+
+//make post block
+.make-post {
+  background: #ffff;
+  border-radius: 2px;
+  .nav {
+    // background: #e3e9ef;
+    background: #f6f7f9;
+   border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+    li {
+      a {
+        font-size: 14px;
+        padding: 5px 10px;
+        border: none;
+        color: #6a44a2;
+        @include lato(400);
+        position: relative;
+      }
+
+      a.active {
+        background: none;
+        color: #9148a7;
+      }
+    }
+    li:last-child {
+      a {
+        border-left: none !important;
+      }
+    }
+  }
+  .tab-content {
+    height: 100px;
+    .editor {
+      padding-top: 15px;
+      padding-left: 21px;
+      p {
+        margin-left: 10px;
+        color: #D4DBDD;
+        font-size: 12px;
+        padding-top:5px;
+      }
+      i {
+        font-size: 32px;
+      }
+    }
+  }
+}
