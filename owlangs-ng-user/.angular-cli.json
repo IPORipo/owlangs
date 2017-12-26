@@ -5,7 +5,7 @@
   },
   "apps": [
     {
-      "baseHref" : "/user/",
+      "baseHref" : "http://langs.dev/public/user/",
       "root": "src",
       "outDir": "../public/user",
       "assets": [
