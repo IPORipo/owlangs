@@ -1,0 +1,51 @@
+@import 'theme_vars';
+
+// user block
+.user-block {
+  .user-image {
+    @include mainGradient();
+    height: 100px;
+    width: 100%;
+    display: block;
+    position: relative;
+    .user-img {
+      width: 64px;
+      height: 64px;
+      display: block;
+      border-radius: 50%;
+      text-align: center;
+      @include mainGradient();
+      position: absolute;
+      /* line-height: 63px; */
+      bottom: -34px;
+      left: 10px;
+      border: 5px solid #fff;
+      i {
+        font-size: 31px;
+        line-height: 53px;
+        color: #fff;
+      }
+    }
+  }
+  .user-info {
+    background: #fff;
+    padding: 10px;
+    h3 a {
+      padding-left: 74px;
+      padding-right: 0;
+      padding-bottom: 0;
+      padding-top: 0;
+      font-size: 21px;
+      margin-bottom: 0;
+      color: black;
+    }
+    h3 a:hover {
+      text-decoration: underline;
+    }
+    h4 {
+      font-size: 15px;
+      padding-left: 71px;
+      color: #819eb5;
+    }
+  }
+}
