@@ -1,0 +1,162 @@
+@import 'theme_vars';
+
+.search-box {
+  margin: 20px 0;
+  .form-control {
+    @include lightShadow();
+    background: #fff;
+    border: none;
+    border-radius: 2px;
+    font-size: 12px;
+  }
+  .form-control:focus {
+    @include hoverShadow();
+  }
+  button:hover {
+    background: #f0d43473;
+    color: #fff;
+  }
+  button {
+    border: 1px solid #efd125;
+    border-radius: 20px;
+    margin-left: 5px;
+    color: #efd125;
+    font-size: 12px;
+    padding: 5px 20px;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    @include lightShadow();
+
+  }
+  button:hover {
+    @include hoverShadow();
+  }
+}
+
+.jobs-box:hover {
+  @include hoverShadow();
+  cursor: pointer;
+}
+
+.jobs-box {
+  @include lightShadow();
+  background: #fff;
+  margin-bottom: 10px;
+  transition: all 0.2s ease-in-out;
+  padding: 10px;
+  .job {
+    .job-content {
+      .job-header {
+        padding-left: 10px;
+        h3 {
+          @include lato(500);
+          font-size:18px;
+
+        }
+        .meta {
+          padding:5px 0;
+          @include lato(400);
+          font-size: 12px;
+          color: #73828e;
+          i {
+            margin-right: 5px;
+          }
+          .del {
+            margin:0 5px;
+          }
+        }
+      }
+      .job-body {
+        padding-left: 10px;
+        @include lato(400);
+        font-size: 14px;
+        color: #73828e;
+      }
+      .job-footer {
+        padding-left: 10px;
+        @include lato(400);
+        font-size: 12px;
+        color: #73828e;
+        .job-duration,.job-bids-count,.job-budget {
+          i {
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+.sort-sidebar {
+  background: #fff;
+  @include lightShadow();
+  background: #fff;
+  padding: 10px;
+  border-radius: 2px;
+  h3 {
+    font-size: 18px;
+    @include lato(400);
+  }
+  .sort {
+    * {
+      float: left;
+      width: 100%;
+    }
+    a {
+      font-size: 14px;
+      text-transform: lowercase;
+      @include lato(300);
+      color: #276fab;
+    }
+    select,input {
+      @include lightShadow();
+      background: #fff;
+      border: none;
+      border-radius: 2px;
+      font-size: 14px;
+      @include lato(300);
+      color: #276fab;
+      margin: 10px 0;
+      transition: all 0.2s ease-in-out;
+      height: 30px;
+      option {
+        padding: 10px 0;
+      }
+    }
+    input {
+      padding: 10px;
+    }
+    select:focus,input:focus {
+      outline: none;
+    }
+    .sort-opts {
+      input {
+
+        width: 47.5%;
+        float: left;
+      }
+      input:focus {
+        @include hoverShadow();
+      }
+      input:first-child {
+        margin-right: 10px;
+      }
+    }
+  }
+  button {
+    border: 1px solid #efd125;
+    border-radius: 20px;
+    margin-left: 5px;
+    color: #efd125;
+    font-size: 12px;
+    padding: 5px 20px;
+    @include lato(400);
+    margin-top: 20px;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+  }
+  button:hover {
+    background: #f0d43473;
+    color: #fff;
+    @include hoverShadow();
+  }
+}

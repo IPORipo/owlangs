@@ -2,6 +2,7 @@
 
 // user block
 .user-block {
+  @include lightShadow();
   .user-image {
     @include mainGradient();
     height: 100px;

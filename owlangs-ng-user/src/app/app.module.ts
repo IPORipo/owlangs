@@ -1,21 +1,31 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { AppComponent } from './app.component';
 import { appRouting } from './app.routing';
 import { HomeModule } from './home/home.module';
 import { UserModule } from './user/user.module';
-import { WordComponent } from './word/word.component';
+import { WordModule } from './word/word.module';
+import { ExcercicesModule } from './excercices/excercices.module';
+import { NavigationModule } from './partials/navigation/navigation.module';
+import { JobsModule } from './jobs/jobs.module';
+
+
 
 @NgModule({
   declarations: [
-    AppComponent,
-    WordComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     HomeModule,
     UserModule,
+    WordModule,
+    ExcercicesModule,
+    NavigationModule,
+    JobsModule
     appRouting
   ],
   providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],

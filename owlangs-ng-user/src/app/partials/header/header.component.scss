@@ -2,6 +2,7 @@
 
 .navbar {
   @include mainGradient();
+  @include lightShadow();
   .navbar-logo {
     text-align: center;
     img {

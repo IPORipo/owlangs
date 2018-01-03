@@ -1,8 +1,8 @@
 <div class="navigation">
   <h3>Navigation</h3>
   <ul>
-    <li><a href="#"><i class="fa fa-book" aria-hidden="true"></i> Words</a></li>
-    <li><a href="#"><i class="fa fa-file-excel-o" aria-hidden="true"></i>Excercices</a></li>
-    <li><a href="#"><i class="fa fa-briefcase" aria-hidden="true"></i>Jobs</a></li>
+    <li><a [routerLinkActive]="['active']" [routerLink]="['/words']"><i class="fa fa-book" aria-hidden="true"></i> Words</a></li>
+    <li><a [routerLinkActive]="['active']"  [routerLink]="['/excercices']" ><i class="fa fa-file-excel-o" aria-hidden="true"></i>Excercices</a></li>
+    <li><a [routerLinkActive]="['active']"  [routerLink]="['/jobs']"><i class="fa fa-briefcase" aria-hidden="true"></i>Jobs</a></li>
   </ul>
 </div>

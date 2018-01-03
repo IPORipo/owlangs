@@ -1,22 +1,23 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { WordComponent } from './word.component';
+import { ExcercicesComponent } from './excercices.component';
 import { HeaderModule } from '../partials/header/header.module';
-import { PostModule } from '../partials/post/post.module';
-import { MakePostModule } from '../partials/make-post/make-post.module';
 import { UserBlockModule } from '../partials/user-block/user-block.module';
+import { MakePostModule } from '../partials/make-post/make-post.module';
+import { PostModule } from '../partials/post/post.module';
 import { NavigationModule } from '../partials/navigation/navigation.module';
+
 
 @NgModule({
   imports: [
     CommonModule,
     HeaderModule,
-    PostModule,
-    MakePostModule,
     UserBlockModule,
-    NavigationModule
+    MakePostModule,
+    NavigationModule,
+    PostModule
   ],
-  declarations: [ WordComponent ],
-  exports: [ WordComponent ]
+  declarations: [ExcercicesComponent],
+  exports: [ExcercicesComponent]
 })
-export class WordModule { }
+export class ExcercicesModule { }

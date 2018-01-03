@@ -3,6 +3,8 @@
 
 // friends online
 .friends-online {
+  @include lightShadow();
+
   background: #fff;
   border-radius: 2px;
   h3 {

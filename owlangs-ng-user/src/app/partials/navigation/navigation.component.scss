@@ -1,5 +1,6 @@
 @import 'theme_vars';
 .navigation {
+  @include lightShadow();
   margin-top: 20px;
   background: #fff;
   border-radius:2px;
@@ -21,11 +22,13 @@
         font-size: 14px;
         display: inline-block;
         width: 100%;
+        transition: all 0.2s ease-in-out;
         i {
           margin-right:10px;
         }
       }
       a:hover {
+        @include hoverShadow();
         text-decoration: none;
         background: #6a44a2;
         color: #fff;

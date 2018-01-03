@@ -1,4 +1,4 @@
-<div class="make-post">
+<div class="make-post" (click)="animate($event)" >
   <ul class="nav nav-tabs" id="myTab" role="tablist">
     <li class="nav-item">
       <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">post a word</a>
@@ -15,9 +15,11 @@
   </ul>
   <div class="tab-content" id="myTabContent">
     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-      <div class="editor d-flex">
+      <div class="editor d-flex" >
           <i class="fa fa-user-circle" aria-hidden="true"></i>
-          <p>Write a word</p>
+          <div class="editor-inner">
+            Write a word
+          </div>
       </div>
     </div>
     <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
@@ -32,5 +34,39 @@
             <p>Post an chalange</p>
         </div>
     </div>
+  </div>
+</div>
+
+<div class="editor-modal" [@showpopup]='state'>
+  <div class="modal-header d-flex justify-content-start">
+    <h3 class="mr-auto">Post a words</h3>
+    <div class="user">
+      <i class="fa fa-user-circle" aria-hidden="true"></i>
+      <span>username</span>
+    </div>
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="fa fa-globe" aria-hidden="true"></i>
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="#"><i class="fa fa-lock" aria-hidden="true"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="modal-body">
+    <ul class="progressbar d-flex justify-conten-between">
+      <li class="active">Make a title</li>
+      <li>Add wordks</li>
+      <li>Publish</li>
+    </ul>
+    <div class="form-group clearfix">
+      <i class="fa fa-header" aria-hidden="true"></i><input type="text" class="form-control" placeholder="Type a name">
+    </div>
+    <div class="form-group clearfix">
+      <i class="fa fa-align-left" aria-hidden="true"></i><textarea class="form-control" placeholder="Type a description"></textarea>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-next">Next</button>
   </div>
 </div>

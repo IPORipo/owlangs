@@ -1,13 +1,21 @@
 @import 'theme_vars';
 
+.col-md-3 {
+  z-index: -1;
+}
+
 //make post block
+.make-post:hover {
+  @include hoverShadow();
+}
 .make-post {
+  transition: all 0.2s ease-in-out;
+  @include lightShadow();
   background: #ffff;
   border-radius: 2px;
   .nav {
-    // background: #e3e9ef;
     background: #f6f7f9;
-   border-top-left-radius: 2px;
+    border-top-left-radius: 2px;
     border-top-right-radius: 2px;
     display: flex;
     justify-content: space-between;
@@ -48,6 +56,125 @@
       i {
         font-size: 32px;
       }
+    }
+  }
+}
+
+.editor-modal {
+  @include hoverShadow();
+  background: #fff;
+  border-radius: 2px;
+  position: absolute;
+  z-index: 9999;
+  display: block;
+  width: 900px;
+  top: 0;
+  left: -200px;
+  .modal-header {
+    border-bottom: 1px solid #eee;
+    .user {
+      border-radius: 2px;
+      border: 1px solid #663e94;
+      color: #663e94;
+      cursor: pointer;
+      padding: 5px;
+      margin-right: 5px;
+    }
+    .dropdown {
+      .btn {
+        @include mainGradient();
+        border-radius: 2px;
+        padding: 5px 15px;
+      }
+      .btn:focus {
+        box-shadow: none;
+      }
+      .dropdown-menu {
+        min-width: 100%;
+      }
+    }
+  }
+  .modal-body {
+    .form-group {
+      margin-bottom: 10px;
+      i {
+        float: left;
+        margin-right: 10px;
+        width: 15px;
+        font-size: 12px;
+        margin-top: 12px;
+        color: #a3ccef;
+      }
+      input,textarea {
+        float: left;
+        width:95%;
+      }
+    }
+    .progressbar {
+      counter-reset: step;
+      padding: 20px 0;
+      float: left;
+      display: block;
+      margin: auto;
+      width: 100%;
+      }
+      .progressbar li {
+          list-style-type: none;
+          width: 25%;
+          float: left;
+          font-size: 12px;
+          position: relative;
+          text-align: center;
+          text-transform: uppercase;
+          color: #7d7d7d;
+          margin: auto;
+      }
+      .progressbar li:before {
+          width: 30px;
+          height: 30px;
+          content: counter(step);
+          counter-increment: step;
+          line-height: 30px;
+          border: 2px solid #7d7d7d;
+          display: block;
+          text-align: center;
+          margin: 0 auto 10px auto;
+          border-radius: 50%;
+          background-color: white;
+      }
+      .progressbar li:after {
+          width: 130%;
+          height: 2px;
+          content: '';
+          position: absolute;
+          background-color: #7d7d7d;
+          top: 15px;
+          left: -78%;
+          z-index: -1;
+      }
+      .progressbar li:first-child:after {
+          content: none;
+      }
+      .progressbar li.active {
+          color: green;
+      }
+      .progressbar li.active:before {
+          border-color: #55b776;
+      }
+      .progressbar li.active + li:after {
+          background-color: #55b776;
+      }
+
+  }
+  .modal-footer {
+    button {
+      border-radius: 20px;
+      margin-left: -5px;
+      color: #efd125;
+      font-size: 16px;
+      border: 1px solid;
+      padding: 5px 20px;
+      cursor: pointer;
     }
   }
 }
