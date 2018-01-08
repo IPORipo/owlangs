@@ -26,7 +26,6 @@
     transition: all 0.2s ease-in-out;
     cursor: pointer;
     @include lightShadow();
-
   }
   button:hover {
     @include hoverShadow();
@@ -42,7 +41,7 @@
   @include lightShadow();
   background: #fff;
   margin-bottom: 10px;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.2ss ease-in-out;
   padding: 10px;
   .job {
     .job-content {
@@ -108,7 +107,7 @@
       color: #276fab;
     }
     select,input {
-      @include lightShadow();
+      @include veryLghtShadow();
       background: #fff;
       border: none;
       border-radius: 2px;
@@ -135,7 +134,7 @@
         float: left;
       }
       input:focus {
-        @include hoverShadow();
+        @include lightShadow();
       }
       input:first-child {
         margin-right: 10px;
@@ -158,5 +157,99 @@
     background: #f0d43473;
     color: #fff;
     @include hoverShadow();
+  }
+}
+
+.jobs-modal.hide {
+  visibility: hidden;
+  opacity: 0;
+}
+.jobs-modal.show {
+  visibility: visible;
+  opacity: 1;
+}
+.jobs-modal {
+  @include hoverShadow();
+  background: #fff;
+  border-radius: 2px;
+  position: fixed;
+  z-index: 9999;
+  display: block;
+  width: 700px;
+  top: 20%;
+  transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+  left: 290px;
+  .modal-header {
+    border-bottom: 1px solid #eee;
+    .user {
+      border-radius: 2px;
+      border: 1px solid #663e94;
+      color: #663e94;
+      cursor: pointer;
+      padding: 5px;
+      margin-right: 5px;
+    }
+    .btn {
+      @include mainGradient();
+      border-radius: 2px;
+      padding: 5px 15px;
+      cursor: pointer;
+    }
+    .btn:focus {
+      box-shadow: none;
+    }
+
+  }
+  .modal-body {
+    .job-content {
+      padding-top: 10px;
+      p {
+        @include lato(300);
+        font-size: 14px;
+        line-height: 21px;
+      }
+    }
+    .job-meta {
+      color: #a3ccef;
+      @include lato(300);
+      font-size: 12px;
+      padding-right: 20px;
+      i {
+        margin-right: 10px;
+      }
+    }
+    .form-group {
+      margin-bottom: 10px;
+      i {
+        float: left;
+        margin-right: 10px;
+        width: 15px;
+        font-size: 12px;
+        margin-top: 12px;
+        color: #a3ccef;
+      }
+      input,textarea {
+        float: left;
+        width:95%;
+      }
+    }
+
+
+  }
+  .modal-footer {
+    .usr-bids {
+      img {
+        border-radius: 50%;
+      }
+    }
+    button {
+      border-radius: 20px;
+      margin-left: -5px;
+      color: #efd125;
+      font-size: 16px;
+      border: 1px solid;
+      padding: 5px 20px;
+      cursor: pointer;
+    }
   }
 }

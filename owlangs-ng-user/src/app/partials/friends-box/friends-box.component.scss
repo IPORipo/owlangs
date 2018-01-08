@@ -29,6 +29,12 @@
         h4 {
           font-size: 14px;
           @include lato(700);
+          a {
+            color: black;
+          }
+          a:hover {
+            color: #819eb5;
+          }
         }
         button {
           border: 1px solid #efd125;
@@ -46,4 +52,69 @@
       }
     }
   }
+}
+.user-details {
+  display: block;
+  background: #fff;
+  width: 280px;
+  position: absolute;
+  height: 200px;
+  top: 65px;
+  left: -165px;
+  border-radius: 2px;
+  opacity: 0;
+  transition:all 0.2s ease-in-out;
+  .user-img  {
+    @include mainGradient();
+    height: 100px;
+    .user-icon {
+      a {
+        width: 64px;
+        height: 64px;
+        display: block;
+        border-radius: 50%;
+        text-align: center;
+        background: #9D50BB;
+        background: linear-gradient(to top, #6E48AA, #9D50BB);
+        position: absolute;
+        left: 10px;
+        top: 60px;
+        border: 5px solid #fff;
+        i {
+          font-size: 31px;
+          line-height: 53px;
+          color: #fff;
+        }
+      }
+    }
+  }
+  .user-info {
+    padding: 10px;
+    @include mainButton();
+    button {
+      float: right;
+    }
+    .user-meta {
+      padding-top:20px;
+      h3 {
+        font-size:18px;
+        @include lato(500);
+        a {
+          color: black;
+        }
+      }
+      p {
+        color: black;
+        font-size: 12px;
+        @include lato(500);
+      }
+    }
+  }
+}
+.user-details.hidden {
+  visibility: hidden;
+}
+.user-details.show {
+  visibility: visible;
+  opacity: 1;
 }

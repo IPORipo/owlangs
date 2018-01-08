@@ -7,7 +7,7 @@
         <app-navigation></app-navigation>
       </div>
       <div class="col-md-6">
-        <app-make-post></app-make-post>
+        <app-make-post [options]="makePostOptions"></app-make-post>
         <div class="search-box">
           <form action="">
             <div class="form-group d-flex justify-content-start">
@@ -16,7 +16,7 @@
             </div>
           </form>
         </div>
-        <div class="jobs-box">
+        <div class="jobs-box" (click)="showPopup()">
           <div class="job d-flex">
             <div class="job-img">
                 <i class="fa fa-file-text-o" aria-hidden="true"></i>
@@ -48,7 +48,7 @@
             </div>
           </div>
         </div>
-        <div class="jobs-box">
+        <div class="jobs-box" (click)="showPopup()">
           <div class="job d-flex">
             <div class="job-img">
                 <i class="fa fa-file-text-o" aria-hidden="true"></i>
@@ -80,7 +80,7 @@
             </div>
           </div>
         </div>
-        <div class="jobs-box">
+        <div class="jobs-box" (click)="showPopup()">
           <div class="job d-flex">
             <div class="job-img">
                 <i class="fa fa-file-text-o" aria-hidden="true"></i>
@@ -135,6 +135,52 @@
             <button>Sort</button>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div [className]="class">
+  <div class="modal-header d-flex justify-content-start">
+    <h3 class="mr-auto">Job Title</h3>
+    <div class="user">
+      <i class="fa fa-user-circle" aria-hidden="true"></i>
+      <span>username</span>
+    </div>
+    <button class="btn btn-secondary make-bid" type="button">
+      <i class="fa fa-telegram" aria-hidden="true"></i>
+      Maka a bid
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="job-meta d-flex justify-content-between">
+        <div class="job-duration">
+          <i class="fa fa-calendar" aria-hidden="true"></i>Job Duration: 1 week
+        </div>
+        <div class="job-bids-count">
+            <i class="fa fa-user-plus" aria-hidden="true"></i>
+            Bids:12
+        </div>
+        <div class="job-budget">
+            <i class="fa fa-money" aria-hidden="true"></i>
+            120$
+        </div>
+      </div>
+      <div class="job-content">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur nostrum laborum quae sunt ut earum praesentium provident non rem. Officia, quod? Velit ab voluptates nesciunt quod rem fugiat eius doloribus.</p>
+      </div>
+  </div>
+  <div class="modal-footer d-flex justify-content-start">
+    <div class="usr-bids d-flex">
+      <img src="https://pbs.twimg.com/profile_images/818501615363751936/UckrQGba_bigger.jpg" alt="">
+      <div class="usr-info">
+        <a href="#">user name</a>
+      </div>
+    </div>
+    <div class="usr-bids d-flex">
+      <img src="https://pbs.twimg.com/profile_images/818501615363751936/UckrQGba_bigger.jpg" alt="">
+      <div class="usr-info">
+        <a href="#">user name</a>
       </div>
     </div>
   </div>

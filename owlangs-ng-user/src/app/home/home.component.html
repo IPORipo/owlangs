@@ -1,4 +1,4 @@
-<app-header></app-header>
+<app-header ></app-header>
 <div class="container-fluid" id="main">
   <div class="container">
     <div class="row">
@@ -7,7 +7,7 @@
         <app-navigation></app-navigation>
       </div>
       <div class="col-md-6">
-        <app-make-post></app-make-post>
+        <app-make-post [options]="makePostOptions"></app-make-post>
         <app-post></app-post>
       </div>
       <div class="col-md-3">
@@ -16,3 +16,5 @@
     </div>
   </div>
 </div>
+
+<app-chat-box></app-chat-box>

@@ -1,16 +1,7 @@
-<div class="make-post" (click)="animate($event)" >
+<div class="make-post" (click)="animate()" >
   <ul class="nav nav-tabs" id="myTab" role="tablist">
-    <li class="nav-item">
-      <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">post a word</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">post an excercise </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">post a chalange</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">post a job</a>
+    <li class="nav-item" *ngFor="let option of options">
+      <a class="nav-link"  (click)="clickAction(option)" href="#">{{ option }}</a>
     </li>
   </ul>
   <div class="tab-content" id="myTabContent">
@@ -37,7 +28,7 @@
   </div>
 </div>
 
-<div class="editor-modal" [@showpopup]='state'>
+<div [className]="editorClass">
   <div class="modal-header d-flex justify-content-start">
     <h3 class="mr-auto">Post a words</h3>
     <div class="user">
@@ -70,3 +61,5 @@
     <button class="btn btn-next">Next</button>
   </div>
 </div>
+
+<div [className]="backgroundClass"  (click)="animate()"></div>

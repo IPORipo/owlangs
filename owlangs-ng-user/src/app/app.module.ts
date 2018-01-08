@@ -8,14 +8,11 @@ import { HomeModule } from './home/home.module';
 import { UserModule } from './user/user.module';
 import { WordModule } from './word/word.module';
 import { ExcercicesModule } from './excercices/excercices.module';
-import { NavigationModule } from './partials/navigation/navigation.module';
 import { JobsModule } from './jobs/jobs.module';
-
-
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
@@ -24,8 +21,7 @@ import { JobsModule } from './jobs/jobs.module';
     UserModule,
     WordModule,
     ExcercicesModule,
-    NavigationModule,
-    JobsModule
+    JobsModule,
     appRouting
   ],
   providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],

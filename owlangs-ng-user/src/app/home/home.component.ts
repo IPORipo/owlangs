@@ -7,7 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  makePostOptions =  [
+    'post a word',
+    'post an excercise',
+    'post a chalange',
+    'post a job'
+  ];
+
+  constructor() {
+
+  }
 
   ngOnInit() {
 

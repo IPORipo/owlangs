@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { ChatBoxService } from '../../app-services/chat-box.service';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+
+
+  constructor(private chatBox: ChatBoxService) { }
 
   ngOnInit() {
+
   }
 
+  showMessages(e) {
+    e.preventDefault();
+    this.chatBox.chatBoxShow();
+  }
 }

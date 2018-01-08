@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./friends-box.component.scss']
 })
 export class FriendsBoxComponent implements OnInit {
-
+  offsetTop;
   constructor() { }
 
   ngOnInit() {

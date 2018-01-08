@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExcercicesComponent implements OnInit {
 
+  makePostOptions =  [
+    'post an excercise',
+  ];
   constructor() { }
 
   ngOnInit() {

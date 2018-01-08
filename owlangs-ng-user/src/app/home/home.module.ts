@@ -9,6 +9,7 @@ import { RouterModule } from '@angular/router';
 import { MakePostModule } from '../partials/make-post/make-post.module';
 import { UserBlockModule } from '../partials/user-block/user-block.module';
 import { NavigationModule } from '../partials/navigation/navigation.module';
+import { ChatBoxModule } from '../partials/chat-box/chat-box.module';
 
 @NgModule({
   imports: [
@@ -18,6 +19,7 @@ import { NavigationModule } from '../partials/navigation/navigation.module';
     PostModule,
     MakePostModule,
     UserBlockModule,
+    ChatBoxModule,
     NavigationModule
   ],
   declarations: [

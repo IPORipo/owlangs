@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WordComponent implements OnInit {
 
+  makePostOptions =  [
+    'post a word'
+  ];
   constructor() { }
 
   ngOnInit() {

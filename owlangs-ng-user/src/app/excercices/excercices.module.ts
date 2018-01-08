@@ -6,6 +6,7 @@ import { UserBlockModule } from '../partials/user-block/user-block.module';
 import { MakePostModule } from '../partials/make-post/make-post.module';
 import { PostModule } from '../partials/post/post.module';
 import { NavigationModule } from '../partials/navigation/navigation.module';
+import { ChatBoxModule } from '../partials/chat-box/chat-box.module';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import { NavigationModule } from '../partials/navigation/navigation.module';
     UserBlockModule,
     MakePostModule,
     NavigationModule,
+    ChatBoxModule,
     PostModule
   ],
   declarations: [ExcercicesComponent],
